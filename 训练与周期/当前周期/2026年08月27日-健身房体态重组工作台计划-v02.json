@@ -1,0 +1,459 @@
+{
+  "plan": {
+    "title": "健身房·体态重组训练计划",
+    "subtitle": "上下肢双循环 + 腹部加强 · 4 周健身房适应",
+    "weeks": 4,
+    "athlete": "小贤",
+    "goal": "体态重组·薄肌：增肌与减脂同步推进，塑造肩背倒三角、胸肩厚度和清晰腹肌线条",
+    "frequency": "每周 5 练",
+    "constraints": "由 plan_contract 自动适配；未知重量必须先完成校准。",
+    "baseline": "计划事实来自已确认的状态快照和动作负荷记录。",
+    "objective_mode": "hypertrophy",
+    "tracking_targets": [
+      {
+        "id": "training_completion",
+        "label": "训练完成率",
+        "kind": "training",
+        "source": "每周复盘",
+        "status": "confirmed",
+        "next_action": "每次训练后记录完成动作与组数"
+      },
+      {
+        "id": "planned_sets",
+        "label": "重点肌群计划组数",
+        "kind": "training",
+        "source": "计划 JSON",
+        "status": "confirmed",
+        "next_action": "按计划组数执行，复盘时对比实际组数"
+      },
+      {
+        "id": "progression_log",
+        "label": "渐进记录（重量/次数/余力）",
+        "kind": "training",
+        "source": "训练日志",
+        "status": "needs_baseline",
+        "next_action": "W1 校准每个动作重量并记录首次工作重量"
+      },
+      {
+        "id": "bodyweight_trend",
+        "label": "晨重趋势",
+        "kind": "body",
+        "source": "连续 7 天晨重",
+        "status": "needs_baseline",
+        "next_action": "每天起床排尿后空腹称重，记录 7 天建立基线"
+      },
+      {
+        "id": "daily_steps",
+        "label": "日均步数",
+        "kind": "activity",
+        "source": "手机计步",
+        "status": "needs_baseline",
+        "next_action": "记录 7 天日常步数建立基线"
+      },
+      {
+        "id": "cardio_minutes",
+        "label": "有氧时长",
+        "kind": "activity",
+        "source": "训练日志",
+        "status": "needs_baseline",
+        "next_action": "从 W1 开始记录力量后快走/爬坡时长"
+      }
+    ],
+    "metrics": [
+      {
+        "value": "每周 5 练",
+        "label": "训练频率"
+      },
+      {
+        "value": "4 周",
+        "label": "当前计划"
+      }
+    ]
+  },
+  "phases": [
+    {
+      "label": "执行",
+      "start_week": 1,
+      "end_week": 4
+    }
+  ],
+  "schedule": [
+    {
+      "day": "08-24",
+      "day_key": "下肢·蹲",
+      "theme": "下肢·蹲",
+      "role": "",
+      "label": "W1 下肢·蹲",
+      "title": "下肢·蹲",
+      "exercises": [
+        {
+          "name": "杠铃深蹲",
+          "sets": "待校准：先空杆重建动作，再加片测试；预计标准完成 10 次的重量起步，按余力调整",
+          "planned_sets": "4",
+          "target": "RPE 6 起步，稳定后 7—8（约留 3—2 次余力）；休息 90—120 秒",
+          "priority": "main",
+          "load_status": "calibration_required",
+          "load_source": null,
+          "muscle_groups": []
+        },
+        {
+          "name": "腿举",
+          "sets": "待校准：从轻重量起步，测试标准完成 12 次的重量，按余力调整",
+          "planned_sets": "3",
+          "target": "RPE 6—7（约留 4—3 次余力）；休息 90 秒",
+          "priority": "key",
+          "load_status": "calibration_required",
+          "load_source": null,
+          "muscle_groups": []
+        },
+        {
+          "name": "哑铃罗马尼亚硬拉",
+          "sets": "待校准：空手/轻哑铃先掌握屈髋，再测试标准完成 12 次的重量",
+          "planned_sets": "3",
+          "target": "RPE 6—7（约留 4—3 次余力）；休息 90—120 秒",
+          "priority": "main",
+          "load_status": "calibration_required",
+          "load_source": null,
+          "muscle_groups": []
+        },
+        {
+          "name": "保加利亚分腿蹲",
+          "sets": "待校准：先徒手找平衡，再加哑铃；每侧标准完成 10 次左右起步",
+          "planned_sets": "3",
+          "target": "RPE 6—7（约留 4—3 次余力）；休息 90 秒/侧",
+          "priority": "key",
+          "load_status": "calibration_required",
+          "load_source": null,
+          "muscle_groups": []
+        },
+        {
+          "name": "站姿提踵",
+          "sets": "待校准：选择一个标准完成 15 次的重量，按余力调整",
+          "planned_sets": "3",
+          "target": "RPE 7—8（约留 2—3 次余力）；休息 60—75 秒",
+          "priority": "key",
+          "load_status": "calibration_required",
+          "load_source": null,
+          "muscle_groups": []
+        },
+        {
+          "name": "悬垂举腿",
+          "sets": "以能控制核心、不摆荡为准；标准完成 10—15 次",
+          "planned_sets": "3",
+          "target": "RPE 7—8（约留 2—3 次余力）；休息 60 秒",
+          "priority": "optional",
+          "load_status": "not_weight_based",
+          "load_source": null,
+          "muscle_groups": []
+        }
+      ]
+    },
+    {
+      "day": "08-25",
+      "day_key": "上肢·推",
+      "theme": "上肢·推",
+      "role": "",
+      "label": "W1 上肢·推",
+      "title": "上肢·推",
+      "exercises": [
+        {
+          "name": "杠铃平板卧推",
+          "sets": "待校准：空杆/轻重量重建动作，再测试标准完成 10 次的重量",
+          "planned_sets": "4",
+          "target": "RPE 6 起步，稳定后 7—8（约留 3—2 次余力）；休息 90—120 秒",
+          "priority": "main",
+          "load_status": "calibration_required",
+          "load_source": null,
+          "muscle_groups": []
+        },
+        {
+          "name": "上斜哑铃卧推",
+          "sets": "待校准：按平板卧推 60—70% 重量起步，测试标准完成 10—12 次",
+          "planned_sets": "3",
+          "target": "RPE 6—7（约留 4—3 次余力）；休息 90 秒",
+          "priority": "key",
+          "load_status": "calibration_required",
+          "load_source": null,
+          "muscle_groups": []
+        },
+        {
+          "name": "坐姿哑铃推举",
+          "sets": "待校准：比卧推更轻的重量起步，测试标准完成 10—12 次",
+          "planned_sets": "3",
+          "target": "RPE 6—7（约留 4—3 次余力）；休息 90 秒",
+          "priority": "key",
+          "load_status": "calibration_required",
+          "load_source": null,
+          "muscle_groups": []
+        },
+        {
+          "name": "侧平举",
+          "sets": "待校准：选择一个标准完成 12—15 次的重量，按余力调整",
+          "planned_sets": "3",
+          "target": "RPE 7—8（约留 2—3 次余力）；休息 60—75 秒",
+          "priority": "key",
+          "load_status": "calibration_required",
+          "load_source": null,
+          "muscle_groups": []
+        },
+        {
+          "name": "绳索下压",
+          "sets": "待校准：选择一个标准完成 12—15 次的重量，按余力调整",
+          "planned_sets": "3",
+          "target": "RPE 7—8（约留 2—3 次余力）；休息 60—75 秒",
+          "priority": "key",
+          "load_status": "calibration_required",
+          "load_source": null,
+          "muscle_groups": []
+        },
+        {
+          "name": "绳索卷腹",
+          "sets": "以能控制离心、不借力摆荡为准；标准完成 12—15 次",
+          "planned_sets": "3",
+          "target": "RPE 7—8（约留 2—3 次余力）；休息 60 秒",
+          "priority": "optional",
+          "load_status": "not_weight_based",
+          "load_source": null,
+          "muscle_groups": []
+        }
+      ]
+    },
+    {
+      "day": "08-26",
+      "theme": "休息/轻活动",
+      "role": "恢复与轻活动"
+    },
+    {
+      "day": "08-27",
+      "day_key": "下肢·髋",
+      "theme": "下肢·髋",
+      "role": "",
+      "label": "W1 下肢·髋",
+      "title": "下肢·髋",
+      "exercises": [
+        {
+          "name": "杠铃臀推",
+          "sets": "待校准：空杆/轻重量重建顶髋，再测试标准完成 12 次的重量",
+          "planned_sets": "4",
+          "target": "RPE 6 起步，稳定后 7—8（约留 3—2 次余力）；休息 90—120 秒",
+          "priority": "main",
+          "load_status": "calibration_required",
+          "load_source": null,
+          "muscle_groups": []
+        },
+        {
+          "name": "杠铃罗马尼亚硬拉",
+          "sets": "待校准：空杆/轻重量重建屈髋，再测试标准完成 10—12 次的重量",
+          "planned_sets": "3",
+          "target": "RPE 6—7（约留 4—3 次余力）；休息 90—120 秒",
+          "priority": "main",
+          "load_status": "calibration_required",
+          "load_source": null,
+          "muscle_groups": []
+        },
+        {
+          "name": "坐姿腿弯举",
+          "sets": "待校准：选择一个标准完成 12—15 次的重量，按余力调整",
+          "planned_sets": "3",
+          "target": "RPE 7—8（约留 2—3 次余力）；休息 75—90 秒",
+          "priority": "key",
+          "load_status": "calibration_required",
+          "load_source": null,
+          "muscle_groups": []
+        },
+        {
+          "name": "罗马椅背伸",
+          "sets": "以能控制脊柱稳定为准；标准完成 12—15 次",
+          "planned_sets": "3",
+          "target": "RPE 7（约留 3 次余力）；休息 60—75 秒",
+          "priority": "key",
+          "load_status": "not_weight_based",
+          "load_source": null,
+          "muscle_groups": []
+        },
+        {
+          "name": "坐姿提踵",
+          "sets": "待校准：选择一个标准完成 15 次的重量，按余力调整",
+          "planned_sets": "3",
+          "target": "RPE 7—8（约留 2—3 次余力）；休息 60—75 秒",
+          "priority": "key",
+          "load_status": "calibration_required",
+          "load_source": null,
+          "muscle_groups": []
+        },
+        {
+          "name": "反向卷腹",
+          "sets": "以能控制下背不离地、不摆荡为准；标准完成 12—15 次",
+          "planned_sets": "3",
+          "target": "RPE 7—8（约留 2—3 次余力）；休息 60 秒",
+          "priority": "optional",
+          "load_status": "not_weight_based",
+          "load_source": null,
+          "muscle_groups": []
+        }
+      ]
+    },
+    {
+      "day": "08-28",
+      "day_key": "上肢·拉",
+      "theme": "上肢·拉",
+      "role": "",
+      "label": "W1 上肢·拉",
+      "title": "上肢·拉",
+      "exercises": [
+        {
+          "name": "高位下拉",
+          "sets": "待校准：从轻重量重建动作，再测试标准完成 10—12 次的重量",
+          "planned_sets": "4",
+          "target": "RPE 6 起步，稳定后 7—8（约留 3—2 次余力）；休息 90—120 秒",
+          "priority": "main",
+          "load_status": "calibration_required",
+          "load_source": null,
+          "muscle_groups": []
+        },
+        {
+          "name": "坐姿划船",
+          "sets": "待校准：选择一个标准完成 10—12 次的重量，按余力调整",
+          "planned_sets": "4",
+          "target": "RPE 6—7（约留 4—3 次余力）；休息 90 秒",
+          "priority": "main",
+          "load_status": "calibration_required",
+          "load_source": null,
+          "muscle_groups": []
+        },
+        {
+          "name": "单臂哑铃划船",
+          "sets": "待校准：选择一个标准完成 12 次的重量，按余力调整",
+          "planned_sets": "3",
+          "target": "RPE 7—8（约留 2—3 次余力）；休息 75—90 秒",
+          "priority": "key",
+          "load_status": "calibration_required",
+          "load_source": null,
+          "muscle_groups": []
+        },
+        {
+          "name": "绳索面拉",
+          "sets": "待校准：选择一个标准完成 15 次的重量，按余力调整",
+          "planned_sets": "3",
+          "target": "RPE 7—8（约留 2—3 次余力）；休息 60—75 秒",
+          "priority": "key",
+          "load_status": "calibration_required",
+          "load_source": null,
+          "muscle_groups": []
+        },
+        {
+          "name": "哑铃弯举",
+          "sets": "待校准：选择一个标准完成 12 次的重量，按余力调整",
+          "planned_sets": "3",
+          "target": "RPE 7—8（约留 2—3 次余力）；休息 60—75 秒",
+          "priority": "key",
+          "load_status": "calibration_required",
+          "load_source": null,
+          "muscle_groups": []
+        },
+        {
+          "name": "健腹轮",
+          "sets": "以能控制核心、不塌腰为准；标准完成 8—12 次",
+          "planned_sets": "3",
+          "target": "RPE 7—8（约留 2—3 次余力）；休息 60 秒",
+          "priority": "optional",
+          "load_status": "not_weight_based",
+          "load_source": null,
+          "muscle_groups": []
+        }
+      ]
+    },
+    {
+      "day": "08-29",
+      "day_key": "补强·腹部加强",
+      "theme": "补强·腹部加强",
+      "role": "",
+      "label": "W1 补强·腹部加强",
+      "title": "补强·腹部加强",
+      "exercises": [
+        {
+          "name": "绳索卷腹",
+          "sets": "以能控制离心、不借力摆荡为准；标准完成 12—15 次",
+          "planned_sets": "4",
+          "target": "RPE 7—8（约留 2—3 次余力）；休息 60 秒",
+          "priority": "main",
+          "load_status": "not_weight_based",
+          "load_source": null,
+          "muscle_groups": []
+        },
+        {
+          "name": "悬垂举腿",
+          "sets": "以能控制核心、不摆荡为准；标准完成 10—15 次",
+          "planned_sets": "4",
+          "target": "RPE 7—8（约留 2—3 次余力）；休息 60 秒",
+          "priority": "main",
+          "load_status": "not_weight_based",
+          "load_source": null,
+          "muscle_groups": []
+        },
+        {
+          "name": "健腹轮",
+          "sets": "以能控制核心、不塌腰为准；标准完成 8—12 次",
+          "planned_sets": "3",
+          "target": "RPE 7—8（约留 2—3 次余力）；休息 60 秒",
+          "priority": "key",
+          "load_status": "not_weight_based",
+          "load_source": null,
+          "muscle_groups": []
+        },
+        {
+          "name": "俄罗斯转体",
+          "sets": "以能控制旋转、不塌腰为准；标准完成 15—20 次/侧",
+          "planned_sets": "3",
+          "target": "RPE 7—8（约留 2—3 次余力）；休息 60 秒",
+          "priority": "key",
+          "load_status": "not_weight_based",
+          "load_source": null,
+          "muscle_groups": []
+        },
+        {
+          "name": "L 字支撑",
+          "sets": "以能保持标准姿势为准；坚持 15—30 秒",
+          "planned_sets": "3",
+          "target": "RPE 7—8；休息 60 秒",
+          "priority": "optional",
+          "load_status": "not_weight_based",
+          "load_source": null,
+          "muscle_groups": []
+        }
+      ]
+    },
+    {
+      "day": "08-30",
+      "theme": "休息/轻活动",
+      "role": "恢复与轻活动"
+    }
+  ],
+  "cycles": [],
+  "rules": [
+    {
+      "title": "W1—W2 健身房适应",
+      "body": "恢复稳定后逐步加到计划组数；W1 以校准为主，不强行加量"
+    },
+    {
+      "title": "W2 起（双进阶）",
+      "body": "杠铃动作 +2.5kg、哑铃/器械动作 +1—2kg，回到次数下限；全部组完成且末组保留至少 2 次余力才加重"
+    },
+    {
+      "title": "变形或余力不足",
+      "body": "保持重量或下调 5%—10%，优先保证动作质量"
+    },
+    {
+      "title": "腹部加强",
+      "body": "每个训练日收尾 2—3 组核心动作，补强日集中腹部；同时靠体脂下降显现腹肌线条"
+    },
+    {
+      "title": "有氧",
+      "body": "力量后安排快走/爬坡 15—20 分钟，以能说话不喘的强度推进；先建立基线"
+    },
+    {
+      "title": "负荷校准",
+      "body": "待校准动作按页面引导确定重量；完成后写入实际重量、次数、余力和动作质量。"
+    }
+  ]
+}
