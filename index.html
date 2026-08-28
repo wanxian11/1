@@ -2769,245 +2769,325 @@
     body.dark-background-theme :is(#dayGrid .day,.card:not(#m-record .card),.day,.advice,.note:not(#m-record .note),.link:not(#m-record .link),.chartcard,#bwBox,#bwNote,#cycleCard,#weekMain,.rule-item,.how-step){transition:none!important}
     body.dark-background-theme :is(#dayGrid .day,.card:not(#m-record .card),.day,.advice,.note:not(#m-record .note),.link:not(#m-record .link),.chartcard,#bwBox,#bwNote,#cycleCard,#weekMain,.rule-item,.how-step):hover{transform:none!important}
   }
-  /* ===== 复盘卡片：斜纹硬边 3D + 绿色内容块（用户定制 2026-08-27）===== */
-  #m-record .rv{
-    display:grid!important;
-    grid-template-columns:repeat(2,minmax(0,1fr))!important;
-    gap:18px!important;
-    padding:18px!important;
-    background:transparent!important;
-    border:0!important;
-    box-shadow:none!important;
-    overflow:visible!important;
-    perspective:1000px!important;
-    -webkit-backdrop-filter:none!important;
-    backdrop-filter:none!important;
+  /* ===== 复盘页：Neo-Brutalism 粗野主义卡片（用户定制 2026-08-28，替代旧斜纹绿色 3D）===== */
+  #m-record{
+    --bb-bg:#fff;
+    --bb-ink:#000;
+    --bb-accent:#296fbb;
+    --bb-accent-dark:#004280;
   }
-  #m-record .rv .row{
-    position:relative!important;
-    display:block!important;
-    min-height:250px!important;
-    padding:46px 0 0!important;
-    overflow:visible!important;
-    border:3px solid #141414!important;
+  #m-record>h2{
+    display:flex!important;
+    align-items:center!important;
+    gap:.55em!important;
+    color:var(--bb-ink)!important;
+    background:var(--bb-bg)!important;
+    border:3px solid var(--bb-ink)!important;
     border-radius:0!important;
-    background:
-      linear-gradient(135deg,#0000 18.75%,#f3f3f3 0 31.25%,#0000 0),
-      repeating-linear-gradient(45deg,#f3f3f3 -6.25% 6.25%,#141414 0 18.75%)!important;
-    background-size:60px 60px!important;
-    background-position:0 0,0 0!important;
-    background-color:#141414!important;
-    box-shadow:rgba(142,142,142,.30) 0 30px 30px -10px!important;
-    transform-style:preserve-3d!important;
-    transition:all .5s ease-in-out!important;
-  }
-  #m-record .rv .row:before{color:rgba(20,20,20,.14)!important}
-  #m-record .rv .row:hover{
-    background-position:-100px 100px,-100px 100px!important;
-    transform:perspective(1000px) rotate3d(.5,1,0,12deg)!important;
-  }
-  #m-record .content-box{
-    position:relative!important;
-    background:#8ed500!important;
-    padding:28px 24px 24px!important;
-    transform-style:preserve-3d!important;
-    transition:all .5s ease-in-out!important;
-  }
-  #m-record .content-box .review-kicker{
-    color:#141414!important;
-    font-weight:800!important;
-    letter-spacing:.08em!important;
-  }
-  #m-record .content-box .review-title{
-    display:inline-block!important;
-    margin-top:12px!important;
-    color:#141414!important;
-    font-size:20px!important;
+    box-shadow:6px 6px 0 var(--bb-ink)!important;
+    padding:.5em .85em!important;
+    margin:32px 0 14px!important;
+    font-family:Arial,"Microsoft YaHei",sans-serif!important;
     font-weight:900!important;
-    line-height:1.22!important;
-    letter-spacing:-.02em!important;
-    transform:translate3d(0,0,50px)!important;
-    transition:all .5s ease-in-out!important;
-  }
-  #m-record .content-box .review-title:hover{transform:translate3d(0,0,60px)!important}
-  #m-record .content-box .review-lead{
-    color:#141414!important;
-    transform:translate3d(0,0,30px)!important;
-    transition:all .5s ease-in-out!important;
-  }
-  #m-record .content-box .review-points{
-    transform:translate3d(0,0,30px)!important;
-    transition:all .5s ease-in-out!important;
-  }
-  #m-record .content-box .review-decision{
-    transform:translate3d(0,0,30px)!important;
-    transition:all .5s ease-in-out!important;
-  }
-  #m-record .content-box .review-lead:hover,
-  #m-record .content-box .review-points:hover,
-  #m-record .content-box .review-decision:hover{transform:translate3d(0,0,60px)!important}
-  #m-record .content-box .review-points{margin-top:12px!important}
-  #m-record .content-box .review-point{
-    background:#141414!important;
-    border:1px solid #141414!important;
-    border-radius:0!important;
-    color:#8ed500!important;
-    font-weight:800!important;
-  }
-  #m-record .content-box .review-decision{
-    background:rgba(20,20,20,.10)!important;
-    border-left:3px solid #141414!important;
-    color:#141414!important;
-  }
-  #m-record .content-box .open{
-    display:inline-block!important;
-    cursor:pointer!important;
-    margin-top:14px!important;
-    padding:8px 12px!important;
-    font-weight:900!important;
-    font-size:10px!important;
+    font-size:1.05rem!important;
     text-transform:uppercase!important;
-    letter-spacing:.08em!important;
-    color:#8ed500!important;
-    background:#141414!important;
-    border:0!important;
-    border-radius:0!important;
-    transform:translate3d(0,0,20px)!important;
-    transition:all .5s ease-in-out!important;
+    letter-spacing:.05em!important;
   }
-  #m-record .content-box .open:after{content:""!important}
-  #m-record .content-box .open:hover{transform:translate3d(0,0,60px)!important}
-  #m-record .date-box{
-    position:absolute!important;
-    top:14px!important;
-    right:14px!important;
-    height:56px!important;
-    width:56px!important;
-    background:#141414!important;
-    border:1px solid #8ed500!important;
-    border-radius:0!important;
-    padding:7px!important;
-    z-index:3!important;
-    transform:translate3d(0,0,80px)!important;
-    box-shadow:rgba(100,100,111,.20) 0 17px 10px -10px!important;
-    text-align:center!important;
+  #m-record>h2::before{
+    content:"■"!important;
+    flex:none!important;
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    width:1.2em!important;
+    height:1.2em!important;
+    background:var(--bb-ink)!important;
+    color:var(--bb-bg)!important;
+    font-size:.75em!important;
+    line-height:1!important;
+    font-weight:900!important;
   }
-  #m-record .date-box span{display:block!important;text-align:center!important;line-height:1.15!important}
-  #m-record .date-box .month{color:#8ed500!important;font-size:9px!important;font-weight:700!important;letter-spacing:.05em!important}
-  #m-record .date-box .date{font-size:20px!important;font-weight:900!important;color:#8ed500!important}
-  @media (max-width:899px){
-    #m-record .rv{grid-template-columns:1fr!important}
-  }
-  @media (prefers-reduced-motion:reduce){
-    #m-record .rv .row,#m-record .rv .row:hover,#m-record .content-box,
-    #m-record .content-box .review-title,#m-record .content-box .review-lead,
-    #m-record .content-box .review-points,#m-record .content-box .review-decision,
-    #m-record .content-box .open,#m-record .date-box{transition:none!important}
-    #m-record .rv .row:hover{transform:none!important}
-    #m-record .content-box .review-title,#m-record .content-box .review-lead,
-    #m-record .content-box .review-points,#m-record .content-box .review-decision,
-    #m-record .content-box .open,#m-record .date-box{transform:none!important}
-  }
-  /* ===== 入口卡片：与最近复盘同款斜纹硬边 3D + 绿色内容块（用户定制 2026-08-27）===== */
-  #linkBox{
+  /* 容器：透明网格，卡片自带阴影 */
+  #m-record #reviewBox,
+  #m-record #linkBox{
     display:grid!important;
     grid-template-columns:repeat(2,minmax(0,1fr))!important;
     gap:18px!important;
-    padding:18px!important;
+    padding:0!important;
     background:transparent!important;
     border:0!important;
+    border-radius:0!important;
     box-shadow:none!important;
     overflow:visible!important;
-    perspective:1000px!important;
-    -webkit-backdrop-filter:none!important;
+    transform:none!important;
     backdrop-filter:none!important;
+    -webkit-backdrop-filter:none!important;
   }
-  #linkBox .link{
+  /* 复盘卡 */
+  #m-record .rv .row{
     position:relative!important;
     display:flex!important;
     flex-direction:column!important;
-    min-height:250px!important;
-    padding:46px 0 0!important;
-    overflow:visible!important;
-    border:3px solid #141414!important;
+    min-height:220px!important;
+    padding:0!important;
+    overflow:hidden!important;
+    border:4px solid var(--bb-ink)!important;
     border-radius:0!important;
-    background:
-      linear-gradient(135deg,#0000 18.75%,#f3f3f3 0 31.25%,#0000 0),
-      repeating-linear-gradient(45deg,#f3f3f3 -6.25% 6.25%,#141414 0 18.75%)!important;
-    background-size:60px 60px!important;
-    background-position:0 0,0 0!important;
-    background-color:#141414!important;
-    box-shadow:rgba(142,142,142,.30) 0 30px 30px -10px!important;
-    transform-style:preserve-3d!important;
-    transition:all .5s ease-in-out!important;
+    background:var(--bb-bg)!important;
+    box-shadow:8px 8px 0 var(--bb-ink)!important;
+    color:var(--bb-ink)!important;
+    font-family:Arial,"Microsoft YaHei",sans-serif!important;
+    cursor:pointer!important;
+    transition:transform .15s ease,box-shadow .15s ease,background .15s ease!important;
+  }
+  #m-record .rv .row:hover{
+    background:var(--bb-bg)!important;
+    transform:translate(-2px,-2px)!important;
+    box-shadow:10px 10px 0 var(--bb-ink)!important;
+  }
+  #m-record .rv .row:active{
+    transform:translate(4px,4px)!important;
+    box-shadow:none!important;
+  }
+  #m-record .rv .row:focus-visible{
+    outline:3px solid var(--bb-accent)!important;
+    outline-offset:3px!important;
+  }
+  #m-record .rv .row:before{
+    right:10px!important;
+    bottom:-12px!important;
+    font-size:88px!important;
+    font-weight:900!important;
+    color:rgba(0,0,0,.08)!important;
+  }
+  /* 入口卡 */
+  #m-record #linkBox .link{
+    position:relative!important;
+    display:flex!important;
+    flex-direction:column!important;
+    min-height:190px!important;
+    padding:0!important;
+    overflow:hidden!important;
+    border:4px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    background:var(--bb-bg)!important;
+    box-shadow:8px 8px 0 var(--bb-ink)!important;
+    color:var(--bb-ink)!important;
+    font-family:Arial,"Microsoft YaHei",sans-serif!important;
     text-decoration:none!important;
-    color:inherit!important;
-    font:inherit!important;
     text-align:left!important;
     width:100%!important;
     cursor:pointer!important;
+    transition:transform .15s ease,box-shadow .15s ease!important;
   }
-  #linkBox .link:before{
-    content:attr(data-seq);
+  #m-record #linkBox .link:before{
+    content:attr(data-seq)!important;
     position:absolute!important;
     right:10px!important;
-    bottom:-25px!important;
-    color:rgba(20,20,20,.14)!important;
-    font-size:100px!important;
-    font-weight:800!important;
+    bottom:-12px!important;
+    font-size:88px!important;
+    font-weight:900!important;
     line-height:1!important;
+    color:rgba(0,0,0,.08)!important;
     pointer-events:none!important;
   }
-  #linkBox .link:hover{
-    background-position:-100px 100px,-100px 100px!important;
-    transform:perspective(1000px) rotate3d(.5,1,0,12deg)!important;
+  #m-record #linkBox .link:hover{
+    transform:translate(-2px,-2px)!important;
+    box-shadow:10px 10px 0 var(--bb-ink)!important;
   }
-  #linkBox .content-box{
+  #m-record #linkBox .link:active{
+    transform:translate(4px,4px)!important;
+    box-shadow:none!important;
+  }
+  /* 内容块 */
+  #m-record .content-box{
     position:relative!important;
     flex:1 1 auto!important;
     display:flex!important;
     flex-direction:column!important;
-    background:#8ed500!important;
-    padding:28px 24px 24px!important;
-    transform-style:preserve-3d!important;
-    transition:all .5s ease-in-out!important;
+    background:transparent!important;
+    padding:1.1rem!important;
+    transform:none!important;
+    transition:none!important;
   }
-  #linkBox .content-box .n{
-    color:#141414!important;
-    font-size:20px!important;
-    font-weight:900!important;
-    line-height:1.22!important;
-    letter-spacing:-.02em!important;
-    transform:translate3d(0,0,50px)!important;
-    transition:all .5s ease-in-out!important;
+  /* 日期章：白底黑框方章 */
+  #m-record .date-box{
+    position:absolute!important;
+    top:14px!important;
+    right:14px!important;
+    height:52px!important;
+    width:52px!important;
+    padding:6px!important;
+    background:var(--bb-bg)!important;
+    border:3px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:4px 4px 0 var(--bb-ink)!important;
+    z-index:3!important;
+    transform:none!important;
+    transition:none!important;
+    text-align:center!important;
   }
-  #linkBox .content-box .n:hover{transform:translate3d(0,0,60px)!important}
-  #linkBox .content-box .s{
-    display:inline-block!important;
-    align-self:flex-start!important;
-    margin-top:12px!important;
-    padding:6px 10px!important;
-    background:#141414!important;
-    color:#8ed500!important;
-    font-size:10px!important;
+  #m-record .date-box span{display:block!important;text-align:center!important;line-height:1.15!important}
+  #m-record .date-box .month{color:var(--bb-ink)!important;font-size:8px!important;font-weight:800!important;letter-spacing:.08em!important}
+  #m-record .date-box .date{color:var(--bb-ink)!important;font-size:19px!important;font-weight:900!important}
+  /* 标题区：kicker 带黑色下划线，与负荷卡 ttl 同构 */
+  #m-record .content-box .review-kicker{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    gap:10px!important;
+    padding-bottom:10px!important;
+    border-bottom:3px solid var(--bb-ink)!important;
+    color:var(--bb-ink)!important;
     font-weight:800!important;
+    font-size:.66rem!important;
     letter-spacing:.06em!important;
     text-transform:uppercase!important;
-    border:0!important;
-    border-radius:0!important;
-    transform:translate3d(0,0,30px)!important;
-    transition:all .5s ease-in-out!important;
   }
-  #linkBox .content-box .s:hover{transform:translate3d(0,0,60px)!important}
+  #m-record .content-box .review-title{
+    margin-top:12px!important;
+    color:var(--bb-ink)!important;
+    font-size:20px!important;
+    font-weight:900!important;
+    line-height:1.25!important;
+    letter-spacing:-.02em!important;
+  }
+  #m-record .content-box .review-lead{
+    margin-top:10px!important;
+    color:var(--bb-ink)!important;
+    font-weight:600!important;
+    line-height:1.6!important;
+  }
+  #m-record .content-box .review-points{
+    display:flex!important;
+    gap:6px!important;
+    flex-wrap:wrap!important;
+    margin-top:12px!important;
+  }
+  #m-record .content-box .review-point{
+    padding:.35em .6em!important;
+    background:var(--bb-bg)!important;
+    border:2px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:3px 3px 0 var(--bb-ink)!important;
+    color:var(--bb-ink)!important;
+    font-weight:800!important;
+    font-size:.66rem!important;
+    letter-spacing:.03em!important;
+  }
+  #m-record .content-box .review-decision{
+    margin-top:12px!important;
+    padding:10px 12px!important;
+    background:var(--bb-bg)!important;
+    border:2px solid var(--bb-ink)!important;
+    border-left:8px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:4px 4px 0 var(--bb-ink)!important;
+    color:var(--bb-ink)!important;
+    font-size:12px!important;
+    line-height:1.6!important;
+    font-weight:600!important;
+  }
+  /* 阅读按钮：黑底白字 + 扫光，复用负荷页放大按钮语言 */
+  #m-record .rv .open{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    gap:8px!important;
+    margin-top:auto!important;
+    padding:.55em .8em!important;
+    background:var(--bb-ink)!important;
+    border:3px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:4px 4px 0 var(--bb-ink)!important;
+    color:var(--bb-bg)!important;
+    font-size:.72rem!important;
+    font-weight:900!important;
+    letter-spacing:.05em!important;
+    text-transform:uppercase!important;
+    cursor:pointer!important;
+    position:relative!important;
+    overflow:hidden!important;
+    transition:background .2s ease,border-color .2s ease,box-shadow .15s ease!important;
+  }
+  #m-record .rv .open::before{
+    content:""!important;
+    position:absolute!important;
+    top:0!important;
+    left:-100%!important;
+    width:100%!important;
+    height:100%!important;
+    background:linear-gradient(120deg,transparent,rgba(255,255,255,.5),transparent)!important;
+    transition:left .5s ease!important;
+    pointer-events:none!important;
+  }
+  #m-record .rv .open:hover::before{left:100%!important}
+  #m-record .rv .open:after{color:var(--bb-bg)!important}
+  #m-record .rv .open:hover{
+    background:var(--bb-accent)!important;
+    border-color:var(--bb-accent)!important;
+    color:#fff!important;
+    box-shadow:6px 6px 0 var(--bb-accent-dark)!important;
+  }
+  #m-record .rv .open:hover:after{color:#fff!important}
+  /* 入口卡文字 */
+  #m-record #linkBox .content-box .n{
+    color:var(--bb-ink)!important;
+    font-size:20px!important;
+    font-weight:900!important;
+    line-height:1.25!important;
+    letter-spacing:-.02em!important;
+    margin-bottom:14px!important;
+  }
+  #m-record #linkBox .content-box .s{
+    display:inline-block!important;
+    align-self:flex-start!important;
+    margin-top:auto!important;
+    padding:.4em .65em!important;
+    background:var(--bb-bg)!important;
+    border:2px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:3px 3px 0 var(--bb-ink)!important;
+    color:var(--bb-ink)!important;
+    font-size:.68rem!important;
+    font-weight:800!important;
+    letter-spacing:.04em!important;
+  }
+  /* 兜底：整卡黑字，压回暗色主题白字强制 */
+  #m-record .rv .row,
+  #m-record .rv .row *,
+  #m-record #linkBox .link,
+  #m-record #linkBox .link *{
+    color:var(--bb-ink)!important;
+  }
+  #m-record .rv .row .open,
+  #m-record .rv .row .open:after{
+    color:var(--bb-bg)!important;
+  }
+  /* 备注条 */
+  body.dark-background-theme #m-record>.note{
+    background:var(--bb-bg)!important;
+    border:3px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:6px 6px 0 var(--bb-ink)!important;
+    color:var(--bb-ink)!important;
+    font-weight:700!important;
+    font-family:Arial,"Microsoft YaHei",sans-serif!important;
+    padding:14px 16px!important;
+  }
   @media (max-width:899px){
-    #linkBox{grid-template-columns:1fr!important}
-    #linkBox .link{min-height:200px!important}
+    #m-record #reviewBox,
+    #m-record #linkBox{grid-template-columns:1fr!important}
+    #m-record .rv .row,
+    #m-record #linkBox .link{min-height:0!important}
   }
   @media (prefers-reduced-motion:reduce){
-    #linkBox .link,#linkBox .link:hover,#linkBox .content-box,
-    #linkBox .content-box .n,#linkBox .content-box .s{transition:none!important}
-    #linkBox .link:hover{transform:none!important}
-    #linkBox .content-box .n,#linkBox .content-box .s{transform:none!important}
+    #m-record .rv .row,
+    #m-record #linkBox .link,
+    #m-record .rv .open{transition:none!important}
+    #m-record .rv .row:hover,
+    #m-record #linkBox .link:hover{transform:none!important}
+    #m-record .rv .open::before{display:none!important}
   }
   /* ===== 同步状态条：与左侧导航同款 Neo-Brutalism 硬边卡片（用户定制 2026-08-27）===== */
   #syncBar{
@@ -3396,7 +3476,1180 @@
       transition:none!important;
     }
   }
-  </style>
+  /* ===== 负荷页：Neo-Brutalism 粗野主义卡片（用户定制 2026-08-27）===== */
+  #m-trend{
+    --bb-bg:#fff;
+    --bb-ink:#000;
+    --bb-shadow:10px 10px 0 #000;
+    --bb-accent:#296fbb;
+    --bb-accent-dark:#004280;
+  }
+  #m-trend>h2{
+    display:flex!important;
+    align-items:center!important;
+    gap:.55em!important;
+    color:var(--bb-ink)!important;
+    background:var(--bb-bg)!important;
+    border:3px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:6px 6px 0 var(--bb-ink)!important;
+    padding:.5em .85em!important;
+    margin:32px 0 14px!important;
+    font-family:Arial,"Microsoft YaHei",sans-serif!important;
+    font-weight:900!important;
+    font-size:1.05rem!important;
+    text-transform:uppercase!important;
+    letter-spacing:.05em!important;
+  }
+  #m-trend>h2::before{
+    content:"■"!important;
+    flex:none!important;
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    width:1.2em!important;
+    height:1.2em!important;
+    background:var(--bb-ink)!important;
+    color:var(--bb-bg)!important;
+    font-size:.75em!important;
+    line-height:1!important;
+    font-weight:900!important;
+  }
+  #m-trend #chartBox{
+    background:transparent!important;
+    border:none!important;
+    box-shadow:none!important;
+    padding:0!important;
+  }
+  #m-trend #chartBox .chartcard{
+    background:var(--bb-bg)!important;
+    border:4px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:8px 8px 0 var(--bb-ink)!important;
+    padding:1.1rem!important;
+    color:var(--bb-ink)!important;
+    font-family:Arial,"Microsoft YaHei",sans-serif!important;
+    transition:transform .15s ease,box-shadow .15s ease!important;
+  }
+  #m-trend #chartBox .chartcard:hover{
+    transform:translate(-2px,-2px)!important;
+    box-shadow:10px 10px 0 var(--bb-ink)!important;
+  }
+  #m-trend #chartBox .chartcard:active{
+    transform:translate(4px,4px)!important;
+    box-shadow:none!important;
+  }
+  #m-trend #chartBox .chartcard .ttl{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    gap:.5rem!important;
+    border-bottom:3px solid var(--bb-ink)!important;
+    padding-bottom:.6rem!important;
+    margin-bottom:.9rem!important;
+  }
+  #m-trend #chartBox .chartcard .ttl .n{
+    color:var(--bb-ink)!important;
+    font-weight:900!important;
+    font-size:1.02rem!important;
+    text-transform:uppercase!important;
+  }
+  #m-trend #chartBox .chartcard .chart-tools{
+    display:flex!important;
+    align-items:center!important;
+    gap:.5rem!important;
+  }
+  #m-trend #chartBox .chartcard .ttl .cap{
+    background:var(--bb-bg)!important;
+    border:2px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:3px 3px 0 var(--bb-ink)!important;
+    color:var(--bb-ink)!important;
+    font-weight:700!important;
+    font-size:.68rem!important;
+    text-transform:uppercase!important;
+    letter-spacing:.03em!important;
+    padding:.35em .55em!important;
+  }
+  #m-trend #chartBox .chartcard .chart-expand{
+    display:inline-block!important;
+    padding:.5em .85em!important;
+    background:var(--bb-ink)!important;
+    color:var(--bb-bg)!important;
+    border:3px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:4px 4px 0 var(--bb-ink)!important;
+    font-family:Arial,"Microsoft YaHei",sans-serif!important;
+    font-size:.72rem!important;
+    font-weight:800!important;
+    text-transform:uppercase!important;
+    letter-spacing:.05em!important;
+    cursor:pointer!important;
+    position:relative!important;
+    overflow:hidden!important;
+    transition:transform .15s ease,box-shadow .15s ease,background .2s ease,border-color .2s ease!important;
+  }
+  #m-trend #chartBox .chartcard .chart-expand::before{
+    content:""!important;
+    position:absolute!important;
+    top:0!important;
+    left:-100%!important;
+    width:100%!important;
+    height:100%!important;
+    background:linear-gradient(120deg,transparent,rgba(255,255,255,.5),transparent)!important;
+    transition:left .5s ease!important;
+    pointer-events:none!important;
+  }
+  #m-trend #chartBox .chartcard .chart-expand:hover::before{left:100%!important}
+  #m-trend #chartBox .chartcard .chart-expand:hover{
+    transform:translate(-2px,-2px)!important;
+    background:var(--bb-accent)!important;
+    border-color:var(--bb-accent)!important;
+    color:#fff!important;
+    box-shadow:6px 6px 0 var(--bb-accent-dark)!important;
+  }
+  #m-trend #chartBox .chartcard .chart-expand:active{
+    transform:translate(3px,3px)!important;
+    box-shadow:none!important;
+  }
+  #m-trend #chartBox .chartcard .plot{
+    background:var(--bb-bg)!important;
+    border:2px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:4px 4px 0 var(--bb-ink)!important;
+    color:var(--bb-ink)!important;
+    padding:8px 7px 1px!important;
+  }
+  #m-trend #chartBox .chartcard .lg{
+    color:var(--bb-ink)!important;
+    font-weight:700!important;
+  }
+  #m-trend #chartBox .chartcard .lg i{background:var(--bb-ink)!important}
+  #m-trend #chartBox .chartcard .lg i.plan{border-top:3px dashed var(--bb-ink)!important;background:transparent!important}
+  #m-trend #chartBox .chartcard .lg .stat{color:#222!important}
+  #m-trend #chartBox .chartcard .actuals .actual{
+    background:var(--bb-bg)!important;
+    border:2px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:3px 3px 0 var(--bb-ink)!important;
+    color:var(--bb-ink)!important;
+    font-weight:800!important;
+  }
+  /* 图表内 SVG 配色（白底深线） */
+  #m-trend #chartBox .chartcard .plot svg text{fill:var(--bb-ink)!important}
+  #m-trend #chartBox .chartcard .plot svg .chart-value-label{fill:var(--bb-ink)!important;font-weight:700!important}
+  #m-trend #chartBox .chartcard .plot svg .chart-week-label{fill:#222!important}
+  #m-trend #chartBox .chartcard .plot svg path[stroke="#080808"],
+  #m-trend #chartBox .chartcard .plot svg path[stroke="#171717"]{
+    stroke:var(--bb-ink)!important;
+  }
+  #m-trend #chartBox .chartcard .plot svg path[stroke^="rgba(248,248,245,"]{
+    stroke:rgba(0,0,0,.18)!important;
+  }
+  #m-trend #chartBox .chartcard .plot svg circle[fill="#f7f7f3"]{
+    fill:var(--bb-bg)!important;
+    stroke:var(--bb-ink)!important;
+  }
+  #m-trend #chartBox .chartcard .plot svg circle[fill="#080808"]{
+    fill:var(--bb-ink)!important;
+    stroke:var(--bb-bg)!important;
+  }
+  /* 体重表 */
+  #m-trend #bwBox,
+  #m-trend #dotBox{
+    background:var(--bb-bg)!important;
+    border:4px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:var(--bb-shadow)!important;
+    padding:1.4rem!important;
+    color:var(--bb-ink)!important;
+    font-family:Arial,"Microsoft YaHei",sans-serif!important;
+    transition:transform .15s ease,box-shadow .15s ease!important;
+  }
+  #m-trend #bwBox .weight-table{
+    background:transparent!important;
+    border:none!important;
+    border-radius:0!important;
+    box-shadow:none!important;
+  }
+  #m-trend #bwBox .weight-row{
+    border-bottom:2px solid var(--bb-ink)!important;
+  }
+  #m-trend #bwBox .weight-row:last-child{border-bottom:none!important}
+  #m-trend #bwBox .weight-row.header{
+    background:var(--bb-ink)!important;
+    border-bottom:2px solid var(--bb-ink)!important;
+  }
+  #m-trend #bwBox .weight-row .weight-cell{color:var(--bb-ink)!important;font-weight:700!important}
+  #m-trend #bwBox .weight-row .weight-value{font-weight:900!important}
+  #m-trend #bwBox .weight-row.header .weight-cell{
+    color:var(--bb-bg)!important;
+    font-weight:900!important;
+    letter-spacing:.14em!important;
+  }
+  #m-trend #bwBox .weight-status span{
+    background:var(--bb-bg)!important;
+    border:2px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    color:var(--bb-ink)!important;
+    font-weight:800!important;
+  }
+  #m-trend #bwNote{
+    background:var(--bb-bg)!important;
+    border:3px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:6px 6px 0 var(--bb-ink)!important;
+    color:var(--bb-ink)!important;
+    font-weight:700!important;
+    font-family:Arial,"Microsoft YaHei",sans-serif!important;
+  }
+  /* 打卡点阵 */
+  #m-trend #dotBox .dots{padding:0!important}
+  #m-trend #dotBox .dot .c{
+    width:28px!important;
+    height:28px!important;
+    border-radius:0!important;
+    background:var(--bb-bg)!important;
+    border:2px solid var(--bb-ink)!important;
+    box-shadow:2px 2px 0 var(--bb-ink)!important;
+    color:var(--bb-ink)!important;
+    font-weight:900!important;
+  }
+  #m-trend #dotBox .dot .c.train{
+    background:var(--bb-ink)!important;
+    color:var(--bb-bg)!important;
+    border-color:var(--bb-ink)!important;
+    box-shadow:3px 3px 0 var(--bb-ink)!important;
+  }
+  #m-trend #dotBox .dot .c.rest{
+    background:var(--bb-bg)!important;
+    border:2px solid var(--bb-ink)!important;
+  }
+  #m-trend #dotBox .dot .c.miss{
+    background:var(--bb-bg)!important;
+    border:2px dashed var(--bb-ink)!important;
+  }
+  #m-trend #dotBox .dot .d{color:var(--bb-ink)!important;font-weight:700!important}
+  #m-trend #dotBox .dotlegend{
+    padding:0!important;
+    margin-top:14px!important;
+    color:var(--bb-ink)!important;
+    font-weight:700!important;
+  }
+  #m-trend #dotBox .dotlegend i{
+    border-radius:0!important;
+    background:var(--bb-bg)!important;
+    border:2px solid var(--bb-ink)!important;
+  }
+  #m-trend #dotBox .dotlegend .b i{background:var(--bb-ink)!important;border-color:var(--bb-ink)!important}
+  #m-trend #dotBox .dotlegend .m i{border-style:dashed!important}
+  /* 兜底：整页暗色主题强制白字，这里全部压回黑色 */
+  #m-trend #chartBox .chartcard,
+  #m-trend #chartBox .chartcard *,
+  #m-trend #bwBox,
+  #m-trend #bwBox *,
+  #m-trend #dotBox,
+  #m-trend #dotBox *,
+  #m-trend #bwNote,
+  #m-trend #bwNote *{
+    color:var(--bb-ink)!important;
+  }
+  #m-trend #bwBox .weight-row.header .weight-cell,
+  #m-trend #dotBox .dot .c.train{
+    color:var(--bb-bg)!important;
+  }
+  /* 悬停：容器不继承通用 3D 倾斜 */
+  #m-trend #chartBox:hover{
+    transform:none!important;
+  }
+  #m-trend #bwBox:hover,
+  #m-trend #dotBox:hover{
+    transform:translate(-2px,-2px)!important;
+    box-shadow:12px 12px 0 var(--bb-ink)!important;
+  }
+  /* 放大图弹层同步粗野主义风格 */
+  body.dark-background-theme #chartModal .chart-modal-panel{
+    background:var(--bb-bg)!important;
+    border:4px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:12px 12px 0 var(--bb-ink)!important;
+    color:var(--bb-ink)!important;
+    font-family:Arial,"Microsoft YaHei",sans-serif!important;
+  }
+  body.dark-background-theme #chartModal .chart-modal-panel *{color:var(--bb-ink)!important}
+  body.dark-background-theme #chartModal .chart-modal-kicker{color:#222!important;font-weight:800!important}
+  body.dark-background-theme #chartModal .chart-modal-title{
+    color:var(--bb-ink)!important;
+    font-weight:900!important;
+    text-transform:uppercase!important;
+  }
+  body.dark-background-theme #chartModal .chart-modal-cap{color:#222!important}
+  body.dark-background-theme #chartModal .chart-modal-note{color:#222!important}
+  body.dark-background-theme #chartModal .chart-modal-plot{
+    background:var(--bb-bg)!important;
+    border:2px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:4px 4px 0 var(--bb-ink)!important;
+  }
+  body.dark-background-theme #chartModal .chart-modal-plot svg text{fill:var(--bb-ink)!important}
+  body.dark-background-theme #chartModal .chart-modal-plot svg path[stroke="#080808"],
+  body.dark-background-theme #chartModal .chart-modal-plot svg path[stroke="#171717"]{
+    stroke:var(--bb-ink)!important;
+  }
+  body.dark-background-theme #chartModal .chart-modal-plot svg path[stroke^="rgba(248,248,245,"]{
+    stroke:rgba(0,0,0,.18)!important;
+  }
+  body.dark-background-theme #chartModal .chart-modal-plot svg circle[fill="#f7f7f3"]{
+    fill:var(--bb-bg)!important;
+    stroke:var(--bb-ink)!important;
+  }
+  body.dark-background-theme #chartModal .chart-modal-plot svg circle[fill="#080808"]{
+    fill:var(--bb-ink)!important;
+    stroke:var(--bb-bg)!important;
+  }
+  body.dark-background-theme #chartModal .chart-modal-close{
+    background:var(--bb-ink)!important;
+    border:3px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    color:var(--bb-bg)!important;
+    box-shadow:4px 4px 0 var(--bb-ink)!important;
+  }
+  body.dark-background-theme #chartModal .chart-modal-close:hover{
+    background:var(--bb-accent)!important;
+    border-color:var(--bb-accent)!important;
+    color:#fff!important;
+    box-shadow:5px 5px 0 var(--bb-accent-dark)!important;
+  }
+  @media (prefers-reduced-motion:reduce){
+    #m-trend #chartBox .chartcard,
+    #m-trend #bwBox,
+    #m-trend #dotBox,
+    #m-trend #chartBox .chartcard .chart-expand{
+      transition:none!important;
+    }
+    #m-trend #chartBox .chartcard:hover,
+    #m-trend #bwBox:hover,
+    #m-trend #dotBox:hover{
+      transform:none!important;
+    }
+  }
+    /* ===== 周期页：Neo-Brutalism 粗野主义卡片（用户定制 2026-08-28，替代旧青绿胶囊 3D）===== */
+  #m-week{
+    --bb-bg:#fff;
+    --bb-ink:#000;
+    --bb-accent:#296fbb;
+    --bb-accent-dark:#004280;
+  }
+  /* --- h2 白底黑字徽章（与趋势页/复盘页同款） --- */
+  #m-week>h2{
+    display:flex!important;
+    align-items:center!important;
+    gap:.55em!important;
+    color:var(--bb-ink)!important;
+    background:var(--bb-bg)!important;
+    border:3px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:6px 6px 0 var(--bb-ink)!important;
+    padding:.5em .85em!important;
+    margin:32px 0 14px!important;
+    font-family:Arial,"Microsoft YaHei",sans-serif!important;
+    font-weight:900!important;
+    font-size:1.05rem!important;
+    text-transform:uppercase!important;
+    letter-spacing:.05em!important;
+  }
+  #m-week>h2:first-child{margin-top:20px!important}
+  #m-week>h2::before{
+    content:"■"!important;
+    flex:none!important;
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    width:1.2em!important;
+    height:1.2em!important;
+    background:var(--bb-ink)!important;
+    color:var(--bb-bg)!important;
+    font-size:.75em!important;
+    line-height:1!important;
+    font-weight:900!important;
+  }
+  #m-week>h2,
+  #m-week>h2 *{color:var(--bb-ink)!important}
+  #m-week>h2 .t{
+    color:rgba(0,0,0,.55)!important;
+    font-weight:800!important;
+  }
+  /* --- 硬边卡片基座：周期环卡 / 本周主项 / 计划内嵌卡 --- */
+  #m-week #cycleCard,
+  #m-week #weekMain,
+  #m-week .plan-embed{
+    background:var(--bb-bg)!important;
+    border:4px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:8px 8px 0 var(--bb-ink)!important;
+    backdrop-filter:none!important;
+    transform:none!important;
+    transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease!important;
+    color:var(--bb-ink)!important;
+    user-select:text!important;
+  }
+  #m-week #weekMain{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:0!important;
+    padding:0!important;
+    overflow:hidden!important;
+  }
+  #m-week #weekMain:empty{display:none!important}
+  #m-week #weekMain .row{
+    background:var(--bb-bg)!important;
+    color:var(--bb-ink)!important;
+    border-radius:0!important;
+    border-bottom:2px solid var(--bb-ink)!important;
+    box-shadow:none!important;
+    backdrop-filter:none!important;
+    transform:none!important;
+    padding:14px 18px!important;
+  }
+  #m-week #weekMain .row:last-child{border-bottom:0!important}
+  #m-week #weekMain .k{
+    color:var(--bb-ink)!important;
+    font-weight:900!important;
+    letter-spacing:.02em!important;
+  }
+  #m-week #weekMain .plan-tag{
+    display:inline-flex!important;
+    align-items:center!important;
+    padding:2px 8px!important;
+    margin-left:6px!important;
+    background:var(--bb-bg)!important;
+    border:2px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:2px 2px 0 var(--bb-ink)!important;
+    color:var(--bb-ink)!important;
+    font-weight:800!important;
+    font-size:10px!important;
+    letter-spacing:.08em!important;
+  }
+  #m-week #weekMain .plan-prescription{color:var(--bb-ink)!important;font-weight:600!important}
+  #m-week #weekMain .plan-criterion{color:rgba(0,0,0,.78)!important}
+  #m-week #weekMain .plan-criterion b{color:var(--bb-ink)!important;font-weight:900!important}
+  #m-week #planFrame{border-radius:0!important;background:var(--bb-bg)!important}
+  /* --- 周期环卡内部：黑字白底 --- */
+  #m-week #cycleCard,
+  #m-week #cycleCard *{color:var(--bb-ink)!important}
+  #m-week #cycleCard .ringinfo .row{border-bottom-color:rgba(0,0,0,.16)!important}
+  #m-week #cycleCard .ringinfo .row:last-child{border-bottom:0!important}
+  #m-week #cycleCard .stg.cur{
+    background:var(--bb-ink)!important;
+    border-radius:0!important;
+  }
+  #m-week #cycleCard .stg span{color:rgba(0,0,0,.55)!important}
+  #m-week #cycleCard .stg span b{color:rgba(0,0,0,.7)!important}
+  #m-week #cycleCard .ring svg circle{transition:none!important}
+  /* --- 练日卡：白底硬边，当日黑底反白 --- */
+  #m-week #dayGrid .day,
+  #m-week #dayGrid .day *{
+    color:var(--bb-ink)!important;
+    text-shadow:none!important;
+    -webkit-text-stroke:0 transparent!important;
+  }
+  #m-week #dayGrid .day{
+    background:var(--bb-bg)!important;
+    border:4px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:8px 8px 0 var(--bb-ink)!important;
+    backdrop-filter:none!important;
+    transform:none!important;
+    transition:transform .15s ease,box-shadow .15s ease!important;
+    cursor:pointer!important;
+    user-select:text!important;
+    overflow:hidden!important;
+  }
+  #m-week #dayGrid .day::before{
+    content:attr(data-index)!important;
+    color:rgba(0,0,0,.07)!important;
+    right:10px!important;
+    bottom:-16px!important;
+    font-size:86px!important;
+    font-weight:900!important;
+    line-height:1!important;
+  }
+  #m-week #dayGrid .day .st{
+    background:var(--bb-bg)!important;
+    border:2px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:2px 2px 0 var(--bb-ink)!important;
+    color:var(--bb-ink)!important;
+    font-weight:800!important;
+    padding:3px 8px!important;
+  }
+  #m-week #dayGrid .day .day-main{border-top:2px solid rgba(0,0,0,.16)!important}
+  #m-week #dayGrid .day .day-main strong{font-weight:800!important}
+  #m-week #dayGrid .day .dd{color:rgba(0,0,0,.62)!important;font-weight:600!important}
+  #m-week #dayGrid .day.on,
+  #m-week #dayGrid .day.on *{color:#fff!important}
+  #m-week #dayGrid .day.on{
+    background:var(--bb-ink)!important;
+    border-color:var(--bb-ink)!important;
+    box-shadow:8px 8px 0 var(--bb-ink)!important;
+  }
+  #m-week #dayGrid .day.on::before{color:rgba(255,255,255,.14)!important}
+  #m-week #dayGrid .day.on::after{
+    background:var(--bb-bg)!important;
+    width:32px!important;
+    height:4px!important;
+    border-radius:0!important;
+  }
+  #m-week #dayGrid .day.on .st{
+    background:var(--bb-bg)!important;
+    color:var(--bb-ink)!important;
+    border-color:var(--bb-ink)!important;
+    box-shadow:none!important;
+  }
+  #m-week #dayGrid .day.on .day-main{border-top-color:rgba(255,255,255,.24)!important}
+  #m-week #dayGrid .day.on .dd{color:rgba(255,255,255,.75)!important}
+  /* --- 周信号 note：白底硬边 + 黑框小签 --- */
+  #m-week #weekNote,
+  #m-week #weekNote *{color:var(--bb-ink)!important}
+  #m-week #weekNote{
+    background:var(--bb-bg)!important;
+    border:4px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:8px 8px 0 var(--bb-ink)!important;
+    backdrop-filter:none!important;
+    transform:none!important;
+    transition:transform .15s ease,box-shadow .15s ease!important;
+    cursor:default!important;
+    user-select:text!important;
+  }
+  #m-week #weekNote .insight-label{
+    font-weight:900!important;
+    font-size:12px!important;
+    letter-spacing:.14em!important;
+    border-bottom:3px solid var(--bb-ink)!important;
+    padding-bottom:6px!important;
+  }
+  #m-week #weekNote .insight-lead{font-weight:900!important;font-size:17px!important}
+  #m-week #weekNote .insight-point{
+    background:var(--bb-bg)!important;
+    border:2px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:3px 3px 0 var(--bb-ink)!important;
+    padding:10px 12px!important;
+    color:var(--bb-ink)!important;
+  }
+  #m-week #weekNote .insight-value{font-weight:700!important}
+  /* --- hover：位移+硬影，压掉 3D 翻转 --- */
+  #m-week :is(#cycleCard,#weekMain,.card,.note):hover{
+    transform:translate(-2px,-2px)!important;
+    box-shadow:10px 10px 0 var(--bb-ink)!important;
+    border-color:var(--bb-ink)!important;
+  }
+  #m-week #dayGrid .day:hover,
+  #m-week #dayGrid .day.on:hover{
+    transform:translate(-2px,-2px)!important;
+    box-shadow:10px 10px 0 var(--bb-ink)!important;
+    border-color:var(--bb-ink)!important;
+  }
+  @media (prefers-reduced-motion:reduce){
+    #m-week #cycleCard,
+    #m-week #weekMain,
+    #m-week .plan-embed,
+    #m-week #dayGrid .day,
+    #m-week #weekNote{transition:none!important}
+    #m-week :is(#cycleCard,#weekMain,.card,.note):hover,
+    #m-week #dayGrid .day:hover,
+    #m-week #dayGrid .day.on:hover{transform:none!important}
+  }
+  /* ===== 周期页结束 ===== */
+  /* ===== 今日训练页：Neo-Brutalism 粗野主义卡片（用户定制 2026-08-28，替代旧青绿胶囊 3D）===== */
+  #m-today{
+    --bb-bg:#fff;
+    --bb-ink:#000;
+    --bb-accent:#296fbb;
+    --bb-accent-dark:#004280;
+  }
+  /* --- hero 主卡：白底硬边 --- */
+  #m-today .hero{
+    background:var(--bb-bg)!important;
+    border:4px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:10px 10px 0 var(--bb-ink)!important;
+    backdrop-filter:none!important;
+    transform:none!important;
+    transition:transform .15s ease,box-shadow .15s ease!important;
+  }
+  #m-today .hero::before,
+  #m-today .hero::after{content:none!important}
+  #m-today .hero,
+  #m-today .hero *{
+    color:var(--bb-ink)!important;
+    text-shadow:none!important;
+    -webkit-text-stroke:0 transparent!important;
+  }
+  #m-today .hero .hi{
+    font-family:Arial,"Microsoft YaHei",sans-serif!important;
+    font-weight:900!important;
+    letter-spacing:.02em!important;
+  }
+  #m-today .hero .sub{color:rgba(0,0,0,.66)!important;font-weight:700!important}
+  /* --- pills → 方形黑框小签 --- */
+  #m-today .hero .pill{
+    background:var(--bb-bg)!important;
+    border:2px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:3px 3px 0 var(--bb-ink)!important;
+    color:var(--bb-ink)!important;
+    font-weight:800!important;
+    font-size:11px!important;
+    letter-spacing:.06em!important;
+    padding:5px 10px!important;
+    backdrop-filter:none!important;
+  }
+  /* --- advice 子卡（含下周安排表） --- */
+  #m-today #heroAdvice{
+    background:var(--bb-bg)!important;
+    border:3px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:5px 5px 0 var(--bb-ink)!important;
+    backdrop-filter:none!important;
+    transform:none!important;
+    transition:transform .15s ease,box-shadow .15s ease!important;
+    cursor:default!important;
+    user-select:text!important;
+    padding:14px 16px!important;
+  }
+  #m-today #heroAdvice:hover{
+    transform:none!important;
+    box-shadow:5px 5px 0 var(--bb-ink)!important;
+    border-color:var(--bb-ink)!important;
+  }
+  #m-today #heroAdvice,
+  #m-today #heroAdvice *{color:var(--bb-ink)!important}
+  #m-today #heroAdvice .hint{color:rgba(0,0,0,.72)!important;font-weight:600!important}
+  #m-today .next-plan-head{border-bottom:2px solid var(--bb-ink)!important;padding-bottom:10px!important}
+  #m-today .next-plan-kicker{
+    font-weight:900!important;
+    letter-spacing:.16em!important;
+    border-bottom:3px solid var(--bb-ink)!important;
+    display:inline-block!important;
+    padding-bottom:4px!important;
+  }
+  #m-today .next-plan-title{font-weight:900!important;font-size:17px!important}
+  #m-today .next-plan-phase{
+    display:inline-flex!important;
+    align-items:center!important;
+    background:var(--bb-bg)!important;
+    border:2px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:2px 2px 0 var(--bb-ink)!important;
+    color:var(--bb-ink)!important;
+    font-weight:800!important;
+    font-size:10px!important;
+    padding:2px 8px!important;
+  }
+  #m-today .next-plan-row{border-bottom:2px solid var(--bb-ink)!important}
+  #m-today .next-plan-row:last-child{border-bottom:0!important}
+  #m-today .next-plan-label{
+    color:rgba(0,0,0,.5)!important;
+    font-weight:800!important;
+    font-size:9px!important;
+    letter-spacing:.12em!important;
+    text-transform:uppercase!important;
+  }
+  #m-today .next-plan-lift b{font-weight:800!important}
+  #m-today .next-plan-focus span{color:rgba(0,0,0,.72)!important}
+  /* --- 练习卡：白底硬边，主项黑底反白 --- */
+  #m-today #todayList{
+    background:transparent!important;
+    border:0!important;
+    border-radius:0!important;
+    box-shadow:none!important;
+    overflow:visible!important;
+    grid-template-columns:repeat(auto-fill,minmax(230px,1fr))!important;
+    gap:14px!important;
+  }
+  #m-today #todayList .ex,
+  #m-today #todayList .ex.main{
+    grid-column:auto!important;
+    background:var(--bb-bg)!important;
+    border:4px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:8px 8px 0 var(--bb-ink)!important;
+    transform:none!important;
+    transition:transform .15s ease,box-shadow .15s ease!important;
+    color:var(--bb-ink)!important;
+    cursor:pointer!important;
+    user-select:text!important;
+    padding:16px 18px!important;
+    min-height:122px!important;
+    text-shadow:none!important;
+  }
+  #m-today #todayList .ex.main{grid-column:span 2!important}
+  #m-today #todayList .ex,
+  #m-today #todayList .ex *{
+    color:var(--bb-ink)!important;
+    text-shadow:none!important;
+    -webkit-text-stroke:0 transparent!important;
+  }
+  #m-today #todayList .ex .n{font-weight:800!important}
+  #m-today #todayList .ex .r .w{
+    font-family:Arial,"Microsoft YaHei",sans-serif!important;
+    font-weight:900!important;
+    font-size:1.3rem!important;
+    letter-spacing:.01em!important;
+  }
+  #m-today #todayList .ex .s,
+  #m-today #todayList .ex .d,
+  #m-today #todayList .ex .rpe{
+    color:rgba(0,0,0,.6)!important;
+    font-weight:700!important;
+  }
+  #m-today #todayList .ex.main,
+  #m-today #todayList .ex.main *{color:#fff!important}
+  #m-today #todayList .ex.main{
+    background:var(--bb-ink)!important;
+    border-color:var(--bb-ink)!important;
+    box-shadow:8px 8px 0 var(--bb-ink)!important;
+  }
+  #m-today #todayList .ex.main .s,
+  #m-today #todayList .ex.main .d,
+  #m-today #todayList .ex.main .rpe{color:rgba(255,255,255,.72)!important}
+  /* --- 底部周信号 note --- */
+  #m-today #todayNote{
+    background:var(--bb-bg)!important;
+    border:4px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:8px 8px 0 var(--bb-ink)!important;
+    color:var(--bb-ink)!important;
+    padding:16px 18px!important;
+    margin-top:18px!important;
+    font-weight:600!important;
+    text-shadow:none!important;
+    cursor:default!important;
+    user-select:text!important;
+  }
+  /* --- hover：位移+硬影 --- */
+  #m-today #todayList .ex:hover{
+    transform:translate(-2px,-2px)!important;
+    box-shadow:10px 10px 0 var(--bb-ink)!important;
+    border-color:var(--bb-ink)!important;
+  }
+  @media (max-width:899px){
+    #m-today #todayList{grid-template-columns:1fr!important}
+    #m-today #todayList .ex.main{grid-column:auto!important}
+  }
+  @media (prefers-reduced-motion:reduce){
+    #m-today .hero,
+    #m-today #heroAdvice,
+    #m-today #todayList .ex{transition:none!important}
+    #m-today #todayList .ex:hover{transform:none!important}
+  }
+  /* ===== 今日页结束 ===== */
+
+  /* ===== 设置页：Neo-Brutalism 粗野主义白底黑框（用户定制 2026-08-28）===== */
+  #m-settings{
+    --bb-bg:#fff;
+    --bb-ink:#000;
+    --bb-accent:#296fbb;
+    --bb-accent-dark:#004280;
+  }
+  #m-settings > h2{
+    display:flex!important;
+    align-items:center!important;
+    gap:.55em!important;
+    color:var(--bb-ink)!important;
+    background:var(--bb-bg)!important;
+    border:3px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:6px 6px 0 var(--bb-ink)!important;
+    padding:.5em .85em!important;
+    margin:32px 0 14px!important;
+    font-family:Arial,"Microsoft YaHei",sans-serif!important;
+    font-weight:900!important;
+    font-size:1.05rem!important;
+    text-transform:uppercase!important;
+    letter-spacing:.05em!important;
+    text-shadow:none!important;
+  }
+  #m-settings > h2:first-child{margin-top:20px!important}
+  #m-settings > h2::before{
+    content:"■"!important;
+    flex:none!important;
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    width:1.2em!important;
+    height:1.2em!important;
+    background:var(--bb-ink)!important;
+    color:var(--bb-bg)!important;
+    font-size:.75em!important;
+    line-height:1!important;
+    font-weight:900!important;
+  }
+  #m-settings #bgCard{
+    background:var(--bb-bg)!important;
+    border:4px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:8px 8px 0 var(--bb-ink)!important;
+    transform:none!important;
+    transform-style:flat!important;
+    backdrop-filter:none!important;
+    -webkit-backdrop-filter:none!important;
+    overflow:visible!important;
+    color:var(--bb-ink)!important;
+    transition:transform .15s ease,box-shadow .15s ease!important;
+  }
+  /* 选中态与勾选/删除徽标：绿 → 家族强调蓝 */
+  #m-settings .bg-opt.on{
+    box-shadow:4px 4px 0 var(--bb-accent)!important;
+    border-color:var(--bb-ink)!important;
+  }
+  #m-settings .bg-opt.on span{
+    background:rgba(41,111,187,.14)!important;
+    color:#000!important;
+  }
+  #m-settings .bg-opt .chk{
+    background:var(--bb-accent)!important;
+    color:#fff!important;
+  }
+  #m-settings .bg-opt .bg-del:hover{
+    background:var(--bb-accent)!important;
+    color:#fff!important;
+  }
+  @media (prefers-reduced-motion:reduce){
+    #m-settings #bgCard,
+    #m-settings .bg-opt,
+    #m-settings .bg-file,
+    #m-settings .bg-row button.ghost{transition:none!important}
+    #m-settings .bg-opt:hover,
+    #m-settings .bg-file:hover,
+    #m-settings .bg-row button.ghost:hover{transform:none!important}
+  }
+  /* ===== 设置页结束 ===== */
+
+  /* ===== 指南页：Neo-Brutalism 白底黑框（用户定制 2026-08-28，覆写旧薄荷绿定价卡）===== */
+  #m-guide{
+    --bb-bg:#fff;
+    --bb-ink:#000;
+    --bb-accent:#296fbb;
+    --bb-accent-dark:#004280;
+  }
+  #m-guide > h2{
+    display:flex!important;
+    align-items:center!important;
+    gap:.55em!important;
+    color:var(--bb-ink)!important;
+    background:var(--bb-bg)!important;
+    border:3px solid var(--bb-ink)!important;
+    border-radius:0!important;
+    box-shadow:6px 6px 0 var(--bb-ink)!important;
+    padding:.5em .85em!important;
+    margin:32px 0 14px!important;
+    font-family:Arial,"Microsoft YaHei",sans-serif!important;
+    font-weight:900!important;
+    font-size:1.05rem!important;
+    text-transform:uppercase!important;
+    letter-spacing:.05em!important;
+    text-shadow:none!important;
+  }
+  #m-guide > h2:first-child{margin-top:20px!important}
+  #m-guide > h2::before{
+    content:"■"!important;
+    flex:none!important;
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    width:1.2em!important;
+    height:1.2em!important;
+    background:var(--bb-ink)!important;
+    color:var(--bb-bg)!important;
+    font-size:.75em!important;
+    line-height:1!important;
+    font-weight:900!important;
+  }
+  #m-guide #howNote{
+    display:grid!important;
+    grid-template-columns:repeat(auto-fit,minmax(190px,220px))!important;
+    gap:18px!important;
+    justify-content:center!important;
+    align-items:stretch!important;
+    padding:0!important;
+    margin-top:12px!important;
+    background:transparent!important;
+    border:none!important;
+    border-radius:0!important;
+    box-shadow:none!important;
+    backdrop-filter:none!important;
+    -webkit-backdrop-filter:none!important;
+    overflow:visible!important;
+  }
+  #m-guide #ruleBox{
+    display:grid!important;
+    grid-template-columns:repeat(auto-fit,minmax(190px,220px))!important;
+    gap:18px!important;
+    justify-content:center!important;
+    align-items:stretch!important;
+    padding:0!important;
+    background:transparent!important;
+    border:none!important;
+    border-radius:0!important;
+    box-shadow:none!important;
+    overflow:visible!important;
+  }
+  #m-guide #howNote .how-step,
+  #m-guide #ruleBox .rule-item{
+    position:relative!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    justify-content:flex-start!important;
+    width:100%!important;
+    max-width:220px!important;
+    box-sizing:border-box!important;
+    background:#fff!important;
+    padding:1.1rem!important;
+    border-radius:0!important;
+    border:4px solid #000!important;
+    box-shadow:8px 8px 0 #000!important;
+    overflow:hidden!important;
+    color:#000!important;
+    transform:none!important;
+    transform-style:flat!important;
+    cursor:default!important;
+    user-select:auto!important;
+    backdrop-filter:none!important;
+    -webkit-backdrop-filter:none!important;
+    transition:transform .15s ease,box-shadow .15s ease!important;
+  }
+  #m-guide #howNote .how-step .num{
+    display:inline-block!important;
+    color:#000!important;
+    font-size:11px!important;
+    font-weight:800!important;
+    letter-spacing:1.5px!important;
+    text-transform:uppercase!important;
+    opacity:.7!important;
+    margin-bottom:2px!important;
+    line-height:1.25!important;
+  }
+  #m-guide #howNote .how-step b,
+  #m-guide #ruleBox .rule-item .rule-title{
+    color:#000!important;
+    font-size:1.05rem!important;
+    line-height:1.25!important;
+    font-weight:900!important;
+    font-style:normal!important;
+    margin:0!important;
+    white-space:normal!important;
+  }
+  #m-guide #howNote .how-step p,
+  #m-guide #ruleBox .rule-item .rule-preview{
+    color:#000!important;
+    font-size:13px!important;
+    line-height:1.5!important;
+    font-weight:400!important;
+    opacity:.75!important;
+    margin:0!important;
+  }
+  #m-guide #howNote .how-step p{
+    margin-top:.5rem!important;
+  }
+  #m-guide #ruleBox .rule-item .rule-head{
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    gap:.25rem!important;
+    width:100%!important;
+  }
+  #m-guide #ruleBox .rule-item .rule-preview{
+    display:flex!important;
+    flex-direction:column!important;
+    gap:.4rem!important;
+    margin-top:.5rem!important;
+  }
+  #m-guide #ruleBox .rule-item .rule-preview span{
+    display:flex!important;
+    align-items:center!important;
+    gap:4px!important;
+    color:#000!important;
+    font-size:12px!important;
+    line-height:1.4!important;
+    opacity:.8!important;
+  }
+  #m-guide #ruleBox .rule-item .rule-preview span::before{
+    content:"✓"!important;
+    flex:none!important;
+    font-weight:900!important;
+    color:#000!important;
+    opacity:1!important;
+  }
+  #m-guide #ruleBox .rule-item summary{
+    list-style:none!important;
+    cursor:pointer!important;
+    padding:0!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    gap:.25rem!important;
+    width:100%!important;
+    color:#000!important;
+    position:relative!important;
+  }
+  #m-guide #ruleBox .rule-item summary::-webkit-details-marker{display:none!important}
+  #m-guide #ruleBox .rule-item summary::after{
+    content:"+"!important;
+    position:absolute!important;
+    top:0!important;
+    right:0!important;
+    width:1.5rem!important;
+    height:1.5rem!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    background:#000!important;
+    color:#fff!important;
+    font-size:1rem!important;
+    font-weight:900!important;
+    line-height:1!important;
+    border-radius:0!important;
+  }
+  #m-guide #ruleBox .rule-item[open] summary::after{
+    content:"–"!important;
+  }
+  #m-guide #ruleBox .rule-item .rule-body{
+    width:100%!important;
+    padding:.75rem 0 0!important;
+    margin-top:.75rem!important;
+    border-top:2px solid #000!important;
+    color:#000!important;
+    font-size:12px!important;
+    line-height:1.6!important;
+    opacity:.85!important;
+  }
+  #m-guide #howNote .how-step:hover,
+  #m-guide #ruleBox .rule-item:hover{
+    transform:translate(-2px,-2px)!important;
+    box-shadow:10px 10px 0 #000!important;
+  }
+  /* Tooltip 问号按钮：白底黑框 */
+  #m-guide h2 .nb-tip{
+    width:1.7rem!important;
+    height:1.7rem!important;
+    min-width:1.7rem!important;
+    min-height:1.7rem!important;
+    padding:0!important;
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    background:#fff!important;
+    color:#000!important;
+    border:2px solid #000!important;
+    border-radius:0!important;
+    box-shadow:3px 3px 0 #000!important;
+    font-size:.95rem!important;
+    font-weight:900!important;
+    line-height:1!important;
+    cursor:pointer!important;
+    user-select:none!important;
+    transition:transform .18s ease,box-shadow .18s ease!important;
+  }
+  #m-guide h2 .nb-tip:hover,
+  #m-guide h2 .nb-tip:focus-visible{
+    transform:translate(-1px,-1px)!important;
+    box-shadow:4px 4px 0 #000!important;
+  }
+  #m-guide h2 .nb-tip:focus-visible{
+    outline:2px solid var(--bb-accent)!important;
+    outline-offset:2px!important;
+  }
+  #m-guide h2 .nb-tip-b{
+    position:absolute!important;
+    top:calc(100% + .55rem)!important;
+    left:50%!important;
+    z-index:100!important;
+    width:max-content!important;
+    max-width:280px!important;
+    padding:.55rem .7rem!important;
+    background:#000!important;
+    color:#fff!important;
+    border:2px solid #000!important;
+    border-radius:0!important;
+    box-shadow:4px 4px 0 #000!important;
+    font-size:.75rem!important;
+    line-height:1.5!important;
+    font-weight:500!important;
+    text-align:left!important;
+    white-space:nowrap!important;
+    opacity:0!important;
+    pointer-events:none!important;
+    transform:translateX(-50%) translateY(6px)!important;
+    transition:opacity .18s ease,transform .18s ease!important;
+  }
+  #m-guide h2 .nb-tip-c:hover .nb-tip-b,
+  #m-guide h2 .nb-tip-c:focus-within .nb-tip-b{
+    opacity:1!important;
+    pointer-events:auto!important;
+    transform:translateX(-50%) translateY(0)!important;
+  }
+  #m-guide h2 .nb-tip-b::before{
+    content:""!important;
+    position:absolute!important;
+    top:-.32rem!important;
+    left:50%!important;
+    width:.6rem!important;
+    height:.6rem!important;
+    background:#000!important;
+    border-left:2px solid #000!important;
+    border-top:2px solid #000!important;
+    transform:translateX(-50%) rotate(45deg)!important;
+  }
+  @media (max-width:899px){
+    #m-guide #howNote,
+    #m-guide #ruleBox{
+      grid-template-columns:1fr!important;
+      justify-content:stretch!important;
+    }
+    #m-guide #howNote .how-step,
+    #m-guide #ruleBox .rule-item{
+      max-width:100%!important;
+    }
+  }
+  @media (max-width:520px){
+    #m-guide h2 .nb-tip-b{
+      width:auto!important;
+      max-width:190px!important;
+      white-space:normal!important;
+      left:auto!important;
+      right:0!important;
+      transform:translateY(6px)!important;
+    }
+    #m-guide h2 .nb-tip-c:hover .nb-tip-b,
+    #m-guide h2 .nb-tip-c:focus-within .nb-tip-b{
+      transform:translateY(0)!important;
+    }
+    #m-guide h2 .nb-tip-b::before{
+      left:auto!important;
+      right:1rem!important;
+      transform:rotate(45deg)!important;
+    }
+  }
+  @media (prefers-reduced-motion:reduce){
+    #m-guide #howNote .how-step,
+    #m-guide #ruleBox .rule-item,
+    #m-guide h2 .nb-tip,
+    #m-guide h2 .nb-tip-b{
+      transition:none!important;
+    }
+    #m-guide #howNote .how-step:hover,
+    #m-guide #ruleBox .rule-item:hover{
+      transform:none!important;
+      box-shadow:8px 8px 0 #000!important;
+    }
+  }
+  /* ===== 指南页结束 ===== */
+</style>
 </head>
 <body class="dark-background-theme">
 
@@ -3497,7 +4750,7 @@
   <span>动态记录：本地复盘与计划（Notion 可选）</span>
 </footer>
 
-<script id="workbench-data" type="application/json">{"schema": 6, "meta": {"title": "健身房·体态重组训练计划", "source_version": "v02", "updated_at": "2026-08-27", "current_week": 1, "total_weeks": 4, "test_week": 4, "phase": "执行", "plan_start": "2026-08-24", "plan_end": "2026-09-20", "plan_file": "训练与周期/当前周期/2026年08月27日-健身房体态重组工作台计划-v02.html", "plan_href": "%E8%AE%AD%E7%BB%83%E4%B8%8E%E5%91%A8%E6%9C%9F/%E5%BD%93%E5%89%8D%E5%91%A8%E6%9C%9F/2026%E5%B9%B408%E6%9C%8827%E6%97%A5-%E5%81%A5%E8%BA%AB%E6%88%BF%E4%BD%93%E6%80%81%E9%87%8D%E7%BB%84%E5%B7%A5%E4%BD%9C%E5%8F%B0%E8%AE%A1%E5%88%92-v02.html", "baseline_file": "当前训练执行基准.md", "baseline_version": "v02", "week_note": "计划事实来自已确认的状态快照和动作负荷记录。", "goal": "体态重组·薄肌：增肌与减脂同步推进，塑造肩背倒三角、胸肩厚度和清晰腹肌线条", "objective_mode": "hypertrophy"}, "onboarding": {"completed": false, "mode": "needs_calibration", "missing": ["动作重量校准"], "message": "待校准：按训练日中的逐步引导确定未知动作重量。", "review_count": 1}, "system": {"suite_version": "2.0.0-local", "workbench_schema": 6, "ui_contract": "v1", "last_health_check": null, "health": "unknown"}, "knowledge": {"public_pack": {"schema": 1, "status": "unregistered", "source": null}, "private_pack": {"status": "not_loaded", "count": 0, "excluded_from_public_export": true}}, "status": {"state": "onboarding", "effective_until": null, "reason": "待校准：按训练日中的逐步引导确定未知动作重量。", "source": "onboarding"}, "calendar": {"1": "下肢·蹲", "2": "上肢·推", "4": "下肢·髋", "5": "上肢·拉", "6": "补强·腹部加强"}, "weekday": {"下肢·蹲": "周一", "上肢·推": "周二", "下肢·髋": "周四", "上肢·拉": "周五", "补强·腹部加强": "周六"}, "day_order": ["下肢·蹲", "上肢·推", "下肢·髋", "上肢·拉", "补强·腹部加强"], "done": {}, "rest_days": "周三、周五、周日休息或轻活动（步行）", "days": {"下肢·蹲": {"role": "", "exercises": [{"name": "杠铃深蹲", "w": null, "d": "待校准：先空杆重建动作，再加片测试；预计标准完成 10 次的重量起步，按余力调整", "rpe": "RPE 6 起步，稳定后 7—8（约留 3—2 次余力）；休息 90—120 秒", "main": true, "muscle_groups": [], "planned_sets": "4", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "腿举", "w": null, "d": "待校准：从轻重量起步，测试标准完成 12 次的重量，按余力调整", "rpe": "RPE 6—7（约留 4—3 次余力）；休息 90 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "哑铃罗马尼亚硬拉", "w": null, "d": "待校准：空手/轻哑铃先掌握屈髋，再测试标准完成 12 次的重量", "rpe": "RPE 6—7（约留 4—3 次余力）；休息 90—120 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "保加利亚分腿蹲", "w": null, "d": "待校准：先徒手找平衡，再加哑铃；每侧标准完成 10 次左右起步", "rpe": "RPE 6—7（约留 4—3 次余力）；休息 90 秒/侧", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "站姿提踵", "w": null, "d": "待校准：选择一个标准完成 15 次的重量，按余力调整", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 60—75 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "悬垂举腿", "w": null, "d": "以能控制核心、不摆荡为准；标准完成 10—15 次", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 60 秒", "main": false, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}], "date": "2026-08-24", "label": "W1 下肢·蹲", "title": "下肢·蹲"}, "上肢·推": {"role": "", "exercises": [{"name": "杠铃平板卧推", "w": null, "d": "待校准：空杆/轻重量重建动作，再测试标准完成 10 次的重量", "rpe": "RPE 6 起步，稳定后 7—8（约留 3—2 次余力）；休息 90—120 秒", "main": true, "muscle_groups": [], "planned_sets": "4", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "上斜哑铃卧推", "w": null, "d": "待校准：按平板卧推 60—70% 重量起步，测试标准完成 10—12 次", "rpe": "RPE 6—7（约留 4—3 次余力）；休息 90 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "坐姿哑铃推举", "w": null, "d": "待校准：比卧推更轻的重量起步，测试标准完成 10—12 次", "rpe": "RPE 6—7（约留 4—3 次余力）；休息 90 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "侧平举", "w": null, "d": "待校准：选择一个标准完成 12—15 次的重量，按余力调整", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 60—75 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "绳索下压", "w": null, "d": "待校准：选择一个标准完成 12—15 次的重量，按余力调整", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 60—75 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "绳索卷腹", "w": null, "d": "以能控制离心、不借力摆荡为准；标准完成 12—15 次", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 60 秒", "main": false, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}], "date": "2026-08-25", "label": "W1 上肢·推", "title": "上肢·推"}, "下肢·髋": {"role": "", "exercises": [{"name": "杠铃臀推", "w": null, "d": "待校准：空杆/轻重量重建顶髋，再测试标准完成 12 次的重量", "rpe": "RPE 6 起步，稳定后 7—8（约留 3—2 次余力）；休息 90—120 秒", "main": true, "muscle_groups": [], "planned_sets": "4", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "杠铃罗马尼亚硬拉", "w": null, "d": "待校准：空杆/轻重量重建屈髋，再测试标准完成 10—12 次的重量", "rpe": "RPE 6—7（约留 4—3 次余力）；休息 90—120 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "坐姿腿弯举", "w": null, "d": "待校准：选择一个标准完成 12—15 次的重量，按余力调整", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 75—90 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "罗马椅背伸", "w": null, "d": "以能控制脊柱稳定为准；标准完成 12—15 次", "rpe": "RPE 7（约留 3 次余力）；休息 60—75 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "坐姿提踵", "w": null, "d": "待校准：选择一个标准完成 15 次的重量，按余力调整", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 60—75 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "反向卷腹", "w": null, "d": "以能控制下背不离地、不摆荡为准；标准完成 12—15 次", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 60 秒", "main": false, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}], "date": "2026-08-27", "label": "W1 下肢·髋", "title": "下肢·髋"}, "上肢·拉": {"role": "", "exercises": [{"name": "高位下拉", "w": null, "d": "待校准：从轻重量重建动作，再测试标准完成 10—12 次的重量", "rpe": "RPE 6 起步，稳定后 7—8（约留 3—2 次余力）；休息 90—120 秒", "main": true, "muscle_groups": [], "planned_sets": "4", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "坐姿划船", "w": null, "d": "待校准：选择一个标准完成 10—12 次的重量，按余力调整", "rpe": "RPE 6—7（约留 4—3 次余力）；休息 90 秒", "main": true, "muscle_groups": [], "planned_sets": "4", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "单臂哑铃划船", "w": null, "d": "待校准：选择一个标准完成 12 次的重量，按余力调整", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 75—90 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "绳索面拉", "w": null, "d": "待校准：选择一个标准完成 15 次的重量，按余力调整", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 60—75 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "哑铃弯举", "w": null, "d": "待校准：选择一个标准完成 12 次的重量，按余力调整", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 60—75 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "健腹轮", "w": null, "d": "以能控制核心、不塌腰为准；标准完成 8—12 次", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 60 秒", "main": false, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}], "date": "2026-08-28", "label": "W1 上肢·拉", "title": "上肢·拉"}, "补强·腹部加强": {"role": "", "exercises": [{"name": "绳索卷腹", "w": null, "d": "以能控制离心、不借力摆荡为准；标准完成 12—15 次", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 60 秒", "main": true, "muscle_groups": [], "planned_sets": "4", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "悬垂举腿", "w": null, "d": "以能控制核心、不摆荡为准；标准完成 10—15 次", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 60 秒", "main": true, "muscle_groups": [], "planned_sets": "4", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "健腹轮", "w": null, "d": "以能控制核心、不塌腰为准；标准完成 8—12 次", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 60 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "俄罗斯转体", "w": null, "d": "以能控制旋转、不塌腰为准；标准完成 15—20 次/侧", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 60 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "L 字支撑", "w": null, "d": "以能保持标准姿势为准；坚持 15—30 秒", "rpe": "RPE 7—8；休息 60 秒", "main": false, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}], "date": "2026-08-29", "label": "W1 补强·腹部加强", "title": "补强·腹部加强"}}, "timeline": [{"date": "2026-08-24", "type": "training", "day": "下肢·蹲", "status": "planned"}, {"date": "2026-08-25", "type": "training", "day": "上肢·推", "status": "planned"}, {"date": "2026-08-26", "type": "recovery", "title": "休息/轻活动", "role": "恢复与轻活动"}, {"date": "2026-08-27", "type": "training", "day": "下肢·髋", "status": "planned"}, {"date": "2026-08-28", "type": "training", "day": "上肢·拉", "status": "planned"}, {"date": "2026-08-29", "type": "training", "day": "补强·腹部加强", "status": "planned"}, {"date": "2026-08-30", "type": "recovery", "title": "休息/轻活动", "role": "恢复与轻活动"}], "week": [], "phases": [{"label": "执行", "start_week": 1, "end_week": 4}], "charts": {}, "goal_metrics": [{"id": "training_completion", "label": "训练完成率", "value": "0/5 次", "detail": "来自当前训练日时间线", "state": "current", "source": "timeline", "next_action": "每次训练后记录完成动作与组数"}, {"id": "planned_sets", "label": "重点肌群计划组数", "value": "重点动作 79 组", "detail": "这是计划量，不等于已完成训练量", "state": "planned", "source": "plan", "next_action": "按计划组数执行，复盘时对比实际组数"}, {"id": "progression_log", "label": "渐进记录（重量/次数/余力）", "value": "重量 · 次数 · 余力", "detail": "由每次训练实际记录驱动，不用主观猜测替代", "state": "needs_data", "source": "training_review", "next_action": "W1 校准每个动作重量并记录首次工作重量"}], "reviews": [{"date": "08-21", "full_date": "2026-08-21", "week": "W1", "day": "系统初始化", "verdict": "等待首个真实训练记录", "status": "待补充", "file": "2026-08-21-W1-工作台初始化记录", "content_markdown": "---\ndate: 2026-08-21\nweek: W1\nday: 系统初始化\nstatus: 待补充\nworkbench_title: W1 工作台初始化记录\nworkbench_lead: 工作台结构已创建，等待首个真实训练记录\nworkbench_points:\n  - 当前计划已接入\n  - 执行基准已建立\n  - Notion 数据可选\nworkbench_decision: 完成首练后用真实复盘替换初始化记录\n---\n\n# W1 工作台初始化记录\n\n本文件不是训练完成记录，只用于让新工作台建立可追溯的初始周次。\n", "workbench_title": "W1 工作台初始化记录", "workbench_lead": "工作台结构已创建，等待首个真实训练记录", "workbench_points": ["当前计划已接入", "执行基准已建立", "Notion 数据可选"], "workbench_decision": "完成首练后用真实复盘替换初始化记录"}], "rules": ["W1—W2 健身房适应：恢复稳定后逐步加到计划组数；W1 以校准为主，不强行加量", "W2 起（双进阶）：杠铃动作 +2.5kg、哑铃/器械动作 +1—2kg，回到次数下限；全部组完成且末组保留至少 2 次余力才加重", "变形或余力不足：保持重量或下调 5%—10%，优先保证动作质量", "腹部加强：每个训练日收尾 2—3 组核心动作，补强日集中腹部；同时靠体脂下降显现腹肌线条", "有氧：力量后安排快走/爬坡 15—20 分钟，以能说话不喘的强度推进；先建立基线", "负荷校准：待校准动作按页面引导确定重量；完成后写入实际重量、次数、余力和动作质量。"], "advice": "按复盘索引的最近一次判定准备下一次训练。", "today_summary": null, "links": {"review_index_file": "训练复盘与状态/训练复盘/INDEX.md", "status_index_file": "训练复盘与状态/状态档案/INDEX.md"}, "documents": {"review_index": {"title": "训练复盘索引", "content_markdown": "# 训练复盘索引\n\n| 日期 | 周次 | 训练日 | 主判断 | 状态 | 文件 |\n| --- | --- | --- | --- | --- | --- |\n| 2026-08-21 | W1 | 系统初始化 | 等待首个真实训练记录 | 待补充 | [[2026-08-21-W1-工作台初始化记录]] |\n"}, "status_index": {"title": "状态档案", "content_markdown": "# 状态档案索引\n\n| 快照 | 日期 | 状态 | 说明 |\n| --- | --- | --- | --- |\n| [2026-08-27-2256-训练状态档案.md](2026-08-27-2256-训练状态档案.md) | 2026-08-27 22:56 | full | 场地切换：停训一个月后居家恢复约 1 周，现切回健身房，新增腹部加强重点（fitness-state-20260827-2256-personal） |\n| [2026-08-21-1630-训练状态档案.md](2026-08-21-1630-训练状态档案.md) | 2026-08-21 16:30 | full | 首次建档：停训一个月回归，体态重组目标（fitness-state-20260821-1630-personal） |\n\n状态变化时创建新快照，不修改旧快照冒充历史。\n"}}, "notion": {"last_sync": null, "bodyweight": [], "baseline_kg": null, "baseline_note": null, "sessions": [], "activity": [], "note": "本地模式：未使用 Notion；动态记录来自本地复盘与计划。"}, "sync": {"status": "ok", "last_success": "本地数据", "last_attempt": "2026-08-27T23:10", "reason": null, "stale_fields": []}, "provenance": {"plan": {"source": "训练与周期/当前周期/2026年08月27日-健身房体态重组工作台计划-v02.json", "verified_at": "2026-08-27T23:10+08:00", "trust": "local_verified"}, "baseline": {"source": "训练复盘与状态/当前执行基准/当前训练执行基准.md", "verified_at": "2026-08-27T23:10+08:00", "trust": "local_verified"}, "reviews": {"source": "训练复盘与状态/训练复盘/INDEX.md", "verified_at": "2026-08-27T23:10+08:00", "trust": "local_verified", "count": 1}, "notion": {"source": "optional_notion_export", "verified_at": "2026-08-27T23:10", "trust": "verified"}}}</script>
+<script id="workbench-data" type="application/json">{"schema": 6, "meta": {"title": "健身房·体态重组训练计划", "source_version": "v02", "updated_at": "2026-08-28", "current_week": 1, "total_weeks": 4, "test_week": 4, "phase": "执行", "plan_start": "2026-08-24", "plan_end": "2026-09-20", "plan_file": "训练与周期/当前周期/2026年08月27日-健身房体态重组工作台计划-v02.html", "plan_href": "%E8%AE%AD%E7%BB%83%E4%B8%8E%E5%91%A8%E6%9C%9F/%E5%BD%93%E5%89%8D%E5%91%A8%E6%9C%9F/2026%E5%B9%B408%E6%9C%8827%E6%97%A5-%E5%81%A5%E8%BA%AB%E6%88%BF%E4%BD%93%E6%80%81%E9%87%8D%E7%BB%84%E5%B7%A5%E4%BD%9C%E5%8F%B0%E8%AE%A1%E5%88%92-v02.html", "baseline_file": "当前训练执行基准.md", "baseline_version": "v02", "week_note": "计划事实来自已确认的状态快照和动作负荷记录。", "goal": "体态重组·薄肌：增肌与减脂同步推进，塑造肩背倒三角、胸肩厚度和清晰腹肌线条", "objective_mode": "hypertrophy"}, "onboarding": {"completed": false, "mode": "needs_calibration", "missing": ["动作重量校准"], "message": "待校准：按训练日中的逐步引导确定未知动作重量。", "review_count": 1}, "system": {"suite_version": "2.0.0-local", "workbench_schema": 6, "ui_contract": "v1", "last_health_check": null, "health": "unknown"}, "knowledge": {"public_pack": {"schema": 1, "status": "unregistered", "source": null}, "private_pack": {"status": "not_loaded", "count": 0, "excluded_from_public_export": true}}, "status": {"state": "onboarding", "effective_until": null, "reason": "待校准：按训练日中的逐步引导确定未知动作重量。", "source": "onboarding"}, "calendar": {"1": "下肢·蹲", "2": "上肢·推", "4": "下肢·髋", "5": "上肢·拉", "6": "补强·腹部加强"}, "weekday": {"下肢·蹲": "周一", "上肢·推": "周二", "下肢·髋": "周四", "上肢·拉": "周五", "补强·腹部加强": "周六"}, "day_order": ["下肢·蹲", "上肢·推", "下肢·髋", "上肢·拉", "补强·腹部加强"], "done": {}, "rest_days": "周三、周五、周日休息或轻活动（步行）", "days": {"下肢·蹲": {"role": "", "exercises": [{"name": "杠铃深蹲", "w": null, "d": "待校准：先空杆重建动作，再加片测试；预计标准完成 10 次的重量起步，按余力调整", "rpe": "RPE 6 起步，稳定后 7—8（约留 3—2 次余力）；休息 90—120 秒", "main": true, "muscle_groups": [], "planned_sets": "4", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "腿举", "w": null, "d": "待校准：从轻重量起步，测试标准完成 12 次的重量，按余力调整", "rpe": "RPE 6—7（约留 4—3 次余力）；休息 90 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "哑铃罗马尼亚硬拉", "w": null, "d": "待校准：空手/轻哑铃先掌握屈髋，再测试标准完成 12 次的重量", "rpe": "RPE 6—7（约留 4—3 次余力）；休息 90—120 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "保加利亚分腿蹲", "w": null, "d": "待校准：先徒手找平衡，再加哑铃；每侧标准完成 10 次左右起步", "rpe": "RPE 6—7（约留 4—3 次余力）；休息 90 秒/侧", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "站姿提踵", "w": null, "d": "待校准：选择一个标准完成 15 次的重量，按余力调整", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 60—75 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "悬垂举腿", "w": null, "d": "以能控制核心、不摆荡为准；标准完成 10—15 次", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 60 秒", "main": false, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}], "date": "2026-08-24", "label": "W1 下肢·蹲", "title": "下肢·蹲"}, "上肢·推": {"role": "", "exercises": [{"name": "杠铃平板卧推", "w": null, "d": "待校准：空杆/轻重量重建动作，再测试标准完成 10 次的重量", "rpe": "RPE 6 起步，稳定后 7—8（约留 3—2 次余力）；休息 90—120 秒", "main": true, "muscle_groups": [], "planned_sets": "4", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "上斜哑铃卧推", "w": null, "d": "待校准：按平板卧推 60—70% 重量起步，测试标准完成 10—12 次", "rpe": "RPE 6—7（约留 4—3 次余力）；休息 90 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "坐姿哑铃推举", "w": null, "d": "待校准：比卧推更轻的重量起步，测试标准完成 10—12 次", "rpe": "RPE 6—7（约留 4—3 次余力）；休息 90 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "侧平举", "w": null, "d": "待校准：选择一个标准完成 12—15 次的重量，按余力调整", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 60—75 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "绳索下压", "w": null, "d": "待校准：选择一个标准完成 12—15 次的重量，按余力调整", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 60—75 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "绳索卷腹", "w": null, "d": "以能控制离心、不借力摆荡为准；标准完成 12—15 次", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 60 秒", "main": false, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}], "date": "2026-08-25", "label": "W1 上肢·推", "title": "上肢·推"}, "下肢·髋": {"role": "", "exercises": [{"name": "杠铃臀推", "w": null, "d": "待校准：空杆/轻重量重建顶髋，再测试标准完成 12 次的重量", "rpe": "RPE 6 起步，稳定后 7—8（约留 3—2 次余力）；休息 90—120 秒", "main": true, "muscle_groups": [], "planned_sets": "4", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "杠铃罗马尼亚硬拉", "w": null, "d": "待校准：空杆/轻重量重建屈髋，再测试标准完成 10—12 次的重量", "rpe": "RPE 6—7（约留 4—3 次余力）；休息 90—120 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "坐姿腿弯举", "w": null, "d": "待校准：选择一个标准完成 12—15 次的重量，按余力调整", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 75—90 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "罗马椅背伸", "w": null, "d": "以能控制脊柱稳定为准；标准完成 12—15 次", "rpe": "RPE 7（约留 3 次余力）；休息 60—75 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "坐姿提踵", "w": null, "d": "待校准：选择一个标准完成 15 次的重量，按余力调整", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 60—75 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "反向卷腹", "w": null, "d": "以能控制下背不离地、不摆荡为准；标准完成 12—15 次", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 60 秒", "main": false, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}], "date": "2026-08-27", "label": "W1 下肢·髋", "title": "下肢·髋"}, "上肢·拉": {"role": "", "exercises": [{"name": "高位下拉", "w": null, "d": "待校准：从轻重量重建动作，再测试标准完成 10—12 次的重量", "rpe": "RPE 6 起步，稳定后 7—8（约留 3—2 次余力）；休息 90—120 秒", "main": true, "muscle_groups": [], "planned_sets": "4", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "坐姿划船", "w": null, "d": "待校准：选择一个标准完成 10—12 次的重量，按余力调整", "rpe": "RPE 6—7（约留 4—3 次余力）；休息 90 秒", "main": true, "muscle_groups": [], "planned_sets": "4", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "单臂哑铃划船", "w": null, "d": "待校准：选择一个标准完成 12 次的重量，按余力调整", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 75—90 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "绳索面拉", "w": null, "d": "待校准：选择一个标准完成 15 次的重量，按余力调整", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 60—75 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "哑铃弯举", "w": null, "d": "待校准：选择一个标准完成 12 次的重量，按余力调整", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 60—75 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "健腹轮", "w": null, "d": "以能控制核心、不塌腰为准；标准完成 8—12 次", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 60 秒", "main": false, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}], "date": "2026-08-28", "label": "W1 上肢·拉", "title": "上肢·拉"}, "补强·腹部加强": {"role": "", "exercises": [{"name": "绳索卷腹", "w": null, "d": "以能控制离心、不借力摆荡为准；标准完成 12—15 次", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 60 秒", "main": true, "muscle_groups": [], "planned_sets": "4", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "悬垂举腿", "w": null, "d": "以能控制核心、不摆荡为准；标准完成 10—15 次", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 60 秒", "main": true, "muscle_groups": [], "planned_sets": "4", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "健腹轮", "w": null, "d": "以能控制核心、不塌腰为准；标准完成 8—12 次", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 60 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "俄罗斯转体", "w": null, "d": "以能控制旋转、不塌腰为准；标准完成 15—20 次/侧", "rpe": "RPE 7—8（约留 2—3 次余力）；休息 60 秒", "main": true, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}, {"name": "L 字支撑", "w": null, "d": "以能保持标准姿势为准；坚持 15—30 秒", "rpe": "RPE 7—8；休息 60 秒", "main": false, "muscle_groups": [], "planned_sets": "3", "weight_source": "待校准：首练试组后确认工作重量"}], "date": "2026-08-29", "label": "W1 补强·腹部加强", "title": "补强·腹部加强"}}, "timeline": [{"date": "2026-08-24", "type": "training", "day": "下肢·蹲", "status": "planned"}, {"date": "2026-08-25", "type": "training", "day": "上肢·推", "status": "planned"}, {"date": "2026-08-26", "type": "recovery", "title": "休息/轻活动", "role": "恢复与轻活动"}, {"date": "2026-08-27", "type": "training", "day": "下肢·髋", "status": "planned"}, {"date": "2026-08-28", "type": "training", "day": "上肢·拉", "status": "planned"}, {"date": "2026-08-29", "type": "training", "day": "补强·腹部加强", "status": "planned"}, {"date": "2026-08-30", "type": "recovery", "title": "休息/轻活动", "role": "恢复与轻活动"}], "week": [], "phases": [{"label": "执行", "start_week": 1, "end_week": 4}], "charts": {}, "goal_metrics": [{"id": "training_completion", "label": "训练完成率", "value": "0/5 次", "detail": "来自当前训练日时间线", "state": "current", "source": "timeline", "next_action": "每次训练后记录完成动作与组数"}, {"id": "planned_sets", "label": "重点肌群计划组数", "value": "重点动作 79 组", "detail": "这是计划量，不等于已完成训练量", "state": "planned", "source": "plan", "next_action": "按计划组数执行，复盘时对比实际组数"}, {"id": "progression_log", "label": "渐进记录（重量/次数/余力）", "value": "重量 · 次数 · 余力", "detail": "由每次训练实际记录驱动，不用主观猜测替代", "state": "needs_data", "source": "training_review", "next_action": "W1 校准每个动作重量并记录首次工作重量"}], "reviews": [{"date": "08-21", "full_date": "2026-08-21", "week": "W1", "day": "系统初始化", "verdict": "等待首个真实训练记录", "status": "待补充", "file": "2026-08-21-W1-工作台初始化记录", "content_markdown": "---\ndate: 2026-08-21\nweek: W1\nday: 系统初始化\nstatus: 待补充\nworkbench_title: W1 工作台初始化记录\nworkbench_lead: 工作台结构已创建，等待首个真实训练记录\nworkbench_points:\n  - 当前计划已接入\n  - 执行基准已建立\n  - Notion 数据可选\nworkbench_decision: 完成首练后用真实复盘替换初始化记录\n---\n\n# W1 工作台初始化记录\n\n本文件不是训练完成记录，只用于让新工作台建立可追溯的初始周次。\n", "workbench_title": "W1 工作台初始化记录", "workbench_lead": "工作台结构已创建，等待首个真实训练记录", "workbench_points": ["当前计划已接入", "执行基准已建立", "Notion 数据可选"], "workbench_decision": "完成首练后用真实复盘替换初始化记录"}], "rules": ["W1—W2 健身房适应：恢复稳定后逐步加到计划组数；W1 以校准为主，不强行加量", "W2 起（双进阶）：杠铃动作 +2.5kg、哑铃/器械动作 +1—2kg，回到次数下限；全部组完成且末组保留至少 2 次余力才加重", "变形或余力不足：保持重量或下调 5%—10%，优先保证动作质量", "腹部加强：每个训练日收尾 2—3 组核心动作，补强日集中腹部；同时靠体脂下降显现腹肌线条", "有氧：力量后安排快走/爬坡 15—20 分钟，以能说话不喘的强度推进；先建立基线", "负荷校准：待校准动作按页面引导确定重量；完成后写入实际重量、次数、余力和动作质量。"], "advice": "按复盘索引的最近一次判定准备下一次训练。", "today_summary": null, "links": {"review_index_file": "训练复盘与状态/训练复盘/INDEX.md", "status_index_file": "训练复盘与状态/状态档案/INDEX.md"}, "documents": {"review_index": {"title": "训练复盘索引", "content_markdown": "# 训练复盘索引\n\n| 日期 | 周次 | 训练日 | 主判断 | 状态 | 文件 |\n| --- | --- | --- | --- | --- | --- |\n| 2026-08-21 | W1 | 系统初始化 | 等待首个真实训练记录 | 待补充 | [[2026-08-21-W1-工作台初始化记录]] |\n"}, "status_index": {"title": "状态档案", "content_markdown": "# 状态档案索引\n\n| 快照 | 日期 | 状态 | 说明 |\n| --- | --- | --- | --- |\n| [2026-08-27-2256-训练状态档案.md](2026-08-27-2256-训练状态档案.md) | 2026-08-27 22:56 | full | 场地切换：停训一个月后居家恢复约 1 周，现切回健身房，新增腹部加强重点（fitness-state-20260827-2256-personal） |\n| [2026-08-21-1630-训练状态档案.md](2026-08-21-1630-训练状态档案.md) | 2026-08-21 16:30 | full | 首次建档：停训一个月回归，体态重组目标（fitness-state-20260821-1630-personal） |\n\n状态变化时创建新快照，不修改旧快照冒充历史。\n"}}, "notion": {"last_sync": null, "bodyweight": [], "baseline_kg": null, "baseline_note": null, "sessions": [], "activity": [], "note": "本地模式：未使用 Notion；动态记录来自本地复盘与计划。"}, "sync": {"status": "ok", "last_success": "本地数据", "last_attempt": "2026-08-28T15:33", "reason": null, "stale_fields": []}, "provenance": {"plan": {"source": "训练与周期/当前周期/2026年08月27日-健身房体态重组工作台计划-v02.json", "verified_at": "2026-08-28T15:33+08:00", "trust": "local_verified"}, "baseline": {"source": "训练复盘与状态/当前执行基准/当前训练执行基准.md", "verified_at": "2026-08-28T15:33+08:00", "trust": "local_verified"}, "reviews": {"source": "训练复盘与状态/训练复盘/INDEX.md", "verified_at": "2026-08-28T15:33+08:00", "trust": "local_verified", "count": 1}, "notion": {"source": "optional_notion_export", "verified_at": "2026-08-28T15:33", "trust": "verified"}}}</script>
 
 <script>
 (function(){
