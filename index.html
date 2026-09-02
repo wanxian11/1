@@ -408,7 +408,7 @@
   .day .dd{max-width:88%;margin-top:12px;color:#666;font-size:11px;line-height:1.55}
   .day .m{display:grid;gap:7px;margin-top:16px;color:#111}
   .day-main{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding-top:7px;border-top:1px solid rgba(0,0,0,.09)}
-  .day-main:first-child{border-top:none;padding-top:0}.day-main b{font-size:11px}.day-main strong{font-size:15px;font-weight:760;letter-spacing:-.025em;font-variant-numeric:tabular-nums}
+  .day-main:first-child{border-top:none;padding-top:0}.day-main.day-pending strong{font-size:12px;font-weight:600;color:rgba(0,0,0,.45)}.day-main b{font-size:11px}.day-main strong{font-size:15px;font-weight:760;letter-spacing:-.025em;font-variant-numeric:tabular-nums}
   .day.planned{border-style:dashed}.day.planned .st{background:#111;color:#fff;border-color:#111}.day.done .st{background:rgba(255,255,255,.72)}
   .day.on .day-main{border-color:rgba(255,255,255,.15)}.day.on .dd{color:rgba(255,255,255,.55)}
 
@@ -5160,9 +5160,10 @@
   var order = D.day_order || Object.keys(D.days);
   function daySummary(name){
     var d = D.days[name];
-    var mains = d.exercises.filter(function(e){return e.main;});
-    if(!mains.length){ mains=d.exercises.filter(function(e){return e.w;}).slice(0,2); }
-    return mains.map(function(e){return '<span class="day-main"><b>'+esc(e.name.replace('杠铃','').replace('（容量）',''))+'</b><strong>'+esc(e.w||'见计划')+'</strong></span>';}).join('');
+    return d.exercises.map(function(e){
+      var label = e.w ? esc(e.w) : '见计划';
+      return '<span class="day-main'+(e.w?'':' day-pending')+'"><b>'+esc(e.name.replace('杠铃','').replace('（容量）',''))+'</b><strong>'+label+'</strong></span>';
+    }).join('');
   }
   order.forEach(function(name,index){
     var dayEvent=timelineTraining(name);
