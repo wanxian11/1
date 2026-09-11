@@ -1,0 +1,446 @@
+{
+  "plan": {
+    "title": "健身房·体态重组训练计划",
+    "subtitle": "上下肢双循环 + 腹部加强 · 4 周健身房适应",
+    "weeks": 4,
+    "athlete": "小贤",
+    "goal": "体态重组·薄肌：增肌与减脂同步推进，优先塑造肩背倒三角、胸肩厚度、整体紧致薄肌线条与清晰腹肌",
+    "frequency": "每周 5 练",
+    "constraints": "由 plan_contract 自动适配；未知重量必须先完成校准。",
+    "baseline": "计划事实来自已确认的状态快照和动作负荷记录。",
+    "objective_mode": "hypertrophy",
+    "tracking_targets": [
+      {
+        "id": "training_completion",
+        "label": "训练完成率",
+        "kind": "training",
+        "source": "每周复盘",
+        "status": "confirmed",
+        "next_action": "每次训练后记录完成动作与组数"
+      },
+      {
+        "id": "planned_sets",
+        "label": "重点肌群计划组数",
+        "kind": "training",
+        "source": "计划 JSON",
+        "status": "confirmed",
+        "next_action": "按计划组数执行，复盘时对比实际组数"
+      },
+      {
+        "id": "progression_log",
+        "label": "渐进记录（重量/次数/余力）",
+        "kind": "training",
+        "source": "训练日志",
+        "status": "needs_baseline",
+        "next_action": "W1 校准每个动作重量并记录首次工作重量"
+      },
+      {
+        "id": "bodyweight_trend",
+        "label": "晨重趋势",
+        "kind": "body",
+        "source": "连续 7 天晨重",
+        "status": "needs_baseline",
+        "next_action": "每天起床排尿后空腹称重，记录 7 天建立基线"
+      },
+      {
+        "id": "daily_steps",
+        "label": "日均步数",
+        "kind": "activity",
+        "source": "手机计步",
+        "status": "needs_baseline",
+        "next_action": "记录 7 天日常步数建立基线"
+      },
+      {
+        "id": "cardio_minutes",
+        "label": "有氧时长",
+        "kind": "activity",
+        "source": "训练日志",
+        "status": "needs_baseline",
+        "next_action": "从 W1 开始记录力量后快走/轻有氧时长"
+      }
+    ],
+    "metrics": [
+      {
+        "value": "每周 5 练",
+        "label": "训练频率"
+      },
+      {
+        "value": "4 周",
+        "label": "当前计划"
+      }
+    ],
+    "week_policy": "monday_sunday",
+    "calendar_anchor": "2026-08-31"
+  },
+  "phases": [
+    {
+      "label": "执行",
+      "start_week": 1,
+      "end_week": 4
+    }
+  ],
+  "schedule": [
+    {
+      "day": "2026-09-07 已完成",
+      "label": "W2 下肢·蹲",
+      "title": "下肢·蹲",
+      "theme": "下肢·蹲",
+      "exercises": [
+        {
+          "name": "器械深蹲（史密斯机）",
+          "sets": "40kg 4×8—12",
+          "planned_sets": "4",
+          "target": "保持 40kg 冲 4×12；若全部组完成且余力≥4 次，+5kg（器械按档位）；若回归杠铃深蹲从 30kg 重校准",
+          "priority": "main",
+          "load_status": "verified",
+          "load_source": "2026-08-31 W1 下肢·蹲（校准）：35kg 4×12；2026-09-07 W2 下肢·蹲：40kg 4×10（按规则 +5kg），末组余力 2—3 次",
+          "muscle_groups": []
+        },
+        {
+          "name": "腿举机",
+          "sets": "15kg 3×10—15",
+          "planned_sets": "3",
+          "target": "保持 15kg 冲 3×12—15；若全部组完成且余力≥4 次，按机台最小档加重",
+          "priority": "key",
+          "load_status": "verified",
+          "load_source": "2026-08-31 W1 下肢·蹲（校准）：15kg 3×12；2026-09-07 W2 下肢·蹲：15kg 3×10，末组余力 2—3 次",
+          "muscle_groups": []
+        },
+        {
+          "name": "坐姿腿弯举",
+          "sets": "39kg 3×8—12",
+          "planned_sets": "3",
+          "target": "保持 39kg 冲 3×12；全部组完成且余力≥2 次后按机台最小档加重；休息 90 秒",
+          "priority": "key",
+          "load_status": "verified",
+          "load_source": "2026-09-07 W2 下肢·蹲（校准）：39kg 3×12，末组余力 2—3 次",
+          "muscle_groups": []
+        },
+        {
+          "name": "哑铃原地箭步蹲",
+          "sets": "10kg 3×10—12",
+          "planned_sets": "3",
+          "target": "保持 10kg；若全部组完成且余力≥4 次，+2kg 或转为行走箭步蹲",
+          "priority": "key",
+          "load_status": "verified",
+          "load_source": "2026-08-31 W1 下肢·蹲（校准）：原地箭步蹲 10kg 3×12（每侧）；2026-09-07 W2 下肢·蹲：10kg 3×12/侧",
+          "muscle_groups": []
+        },
+        {
+          "name": "站姿提踵",
+          "sets": "自重 3×12—15",
+          "planned_sets": "3",
+          "target": "保持自重冲 3×15；稳定后可持轻哑铃（2.5—5kg）负重；休息 60—75 秒（2026-09-07 W2 校准通过：自重 3×12）",
+          "priority": "optional",
+          "load_status": "verified",
+          "load_source": null,
+          "muscle_groups": []
+        },
+        {
+          "name": "悬垂举腿",
+          "sets": "自重 3×12—15",
+          "planned_sets": "3",
+          "target": "放在收尾执行；末段疲劳允许减为 2 组；稳定后逐步回到 3×15—20 再考虑负重；休息 60—90 秒（2026-09-07 仅 1×12，末段疲劳）",
+          "priority": "optional",
+          "load_status": "verified",
+          "load_source": null,
+          "muscle_groups": []
+        }
+      ],
+      "day_key": "下肢·蹲"
+    },
+    {
+      "day": "2026-09-08 已完成",
+      "label": "W2 上肢·推",
+      "title": "上肢·推",
+      "theme": "上肢·推",
+      "exercises": [
+        {
+          "name": "杠铃平板卧推",
+          "sets": "17.5kg/边 4×6—10（重量按每边片重计，不含杆）",
+          "planned_sets": "4",
+          "target": "保持 17.5kg/边 统一重量，冲满 4×6—10；若全部组完成且余力≥2 次，每边 +2.5kg；休息 120—180 秒",
+          "priority": "main",
+          "load_status": "verified",
+          "load_source": "2026-09-01 W1 上肢·推（校准）：递增热身后工作组 17.5kg/边 2×8，体感吃力；2026-09-08 W2 上肢·推：20kg/边 1×6 + 15kg/边 2×10（3/4 组，末组力竭，组间重量未统一）",
+          "muscle_groups": []
+        },
+        {
+          "name": "上斜哑铃卧推",
+          "sets": "17.5kg/只 3×10—12",
+          "planned_sets": "3",
+          "target": "保持 17.5kg/只；若全部组完成 12 次且余力≥3 次，每只 +2kg；休息 90 秒",
+          "priority": "key",
+          "load_status": "verified",
+          "load_source": "2026-09-01 W1 上肢·推（校准）：17.5kg/只 3×12，次数达区间上限；2026-09-08 W2 上肢·推：17.5kg/只 3×10（区间内）",
+          "muscle_groups": []
+        },
+        {
+          "name": "哑铃侧平举",
+          "sets": "10kg/只 4×10—12",
+          "planned_sets": "4",
+          "target": "保持 10kg/只，质量优先不耸肩借力；若全部组完成 12 次且余力≥2 次，每只 +2kg；休息 60—75 秒",
+          "priority": "key",
+          "load_status": "verified",
+          "load_source": "2026-09-08 W2 上肢·推（校准）：10kg/只 3×10",
+          "muscle_groups": []
+        },
+        {
+          "name": "绳索下压",
+          "sets": "待校准：轻绳测试标准完成 15 次；肘部固定不晃动",
+          "planned_sets": "3",
+          "target": "RPE 6—7（约留 4—3 次余力）；休息 60—75 秒",
+          "priority": "optional",
+          "load_status": "calibration_required",
+          "load_source": "2026-09-01、09-08 未执行保持待校准；09-15 最后一次校准机会（再跳过默认替换或移除，用户 2026-09-10 确认）",
+          "muscle_groups": []
+        },
+        {
+          "name": "绳索卷腹",
+          "sets": "50kg 3×12—15",
+          "planned_sets": "3",
+          "target": "保持 50kg；若全部组完成且余力≥4 次，加一档（+5kg）；休息 60 秒",
+          "priority": "optional",
+          "load_status": "verified",
+          "load_source": "2026-09-04 W1 补强·腹部加强（校准，同动作同源）：龙门架跪姿绳索卷腹 50kg 3×12，体感轻松；2026-09-08 W2 上肢·推：未执行，09-12 补强日继续",
+          "muscle_groups": []
+        }
+      ],
+      "day_key": "上肢·推"
+    },
+    {
+      "day": "09-09",
+      "theme": "休息/轻活动",
+      "role": "恢复与轻活动"
+    },
+    {
+      "day": "09-10",
+      "label": "W2 下肢·髋",
+      "title": "下肢·髋",
+      "theme": "下肢·髋",
+      "exercises": [
+        {
+          "name": "杠铃臀桥",
+          "sets": "10kg/边 4×8—12",
+          "planned_sets": "4",
+          "target": "保持 10kg/边 完成正式 4×8—12；若全部组完成且余力≥2 次，每边 +2.5kg",
+          "priority": "main",
+          "load_status": "verified",
+          "load_source": "2026-09-03 W1 下肢·髋（校准）：10kg/边 3×12，体感吃力（约留 2—3 次余力）；W2 起补足正式组数",
+          "muscle_groups": []
+        },
+        {
+          "name": "罗马椅背屈伸",
+          "sets": "5kg 3×12—15",
+          "planned_sets": "3",
+          "target": "保持 5kg；若全部组完成且余力≥3 次，抱片 +2.5kg",
+          "priority": "key",
+          "load_status": "verified",
+          "load_source": "2026-09-03 W1 下肢·髋（校准）：负重 5kg 3×12",
+          "muscle_groups": []
+        },
+        {
+          "name": "俯卧腿弯举",
+          "sets": "29kg 3×10—12",
+          "planned_sets": "3",
+          "target": "保持 29kg；若全部组完成且余力≥2 次，按机台最小档加重",
+          "priority": "key",
+          "load_status": "verified",
+          "load_source": "2026-09-03 W1 下肢·髋（校准）：29kg 3×12",
+          "muscle_groups": []
+        },
+        {
+          "name": "保加利亚分腿蹲",
+          "sets": "10kg 哑铃 3×10—12/侧",
+          "planned_sets": "3",
+          "target": "保持 10kg 哑铃，先求平衡稳定；动作质量稳定且余力≥2 次时每只 +2kg",
+          "priority": "key",
+          "load_status": "verified",
+          "load_source": "2026-09-03 W1 下肢·髋（校准）：10kg 哑铃 3×12/侧，首次执行，平衡不习惯",
+          "muscle_groups": []
+        },
+        {
+          "name": "坐姿提踵",
+          "sets": "待校准：中等重量测试标准完成 15 次；余力≥4 次加一档",
+          "planned_sets": "3",
+          "target": "RPE 6—7（约留 4—3 次余力）；休息 60—75 秒",
+          "priority": "optional",
+          "load_status": "calibration_required",
+          "load_source": "2026-09-03 未执行保持待校准；09-10 二次机会（若再跳过与用户确认替换或降级）",
+          "muscle_groups": []
+        },
+        {
+          "name": "反向卷腹",
+          "sets": "待校准：先做屈膝反向卷腹测试 15 次；若腰部离地则退阶",
+          "planned_sets": "3",
+          "target": "以骨盆卷动控制为准；休息 60 秒",
+          "priority": "optional",
+          "load_status": "calibration_required",
+          "load_source": "2026-09-03 未执行保持待校准；09-10 二次机会（若再跳过与用户确认替换或降级）",
+          "muscle_groups": []
+        }
+      ],
+      "day_key": "下肢·髋"
+    },
+    {
+      "day": "09-11",
+      "label": "W2 上肢·拉",
+      "title": "上肢·拉",
+      "theme": "上肢·拉",
+      "exercises": [
+        {
+          "name": "高位下拉",
+          "sets": "50kg 4×8—12",
+          "planned_sets": "4",
+          "target": "保持 50kg；若全部组完成且余力≥2 次，+2.5kg；休息 90—120 秒",
+          "priority": "main",
+          "load_status": "verified",
+          "load_source": "2026-08-28 W1 上肢·拉（校准）：50kg 4×12，末组 RPE 8（留 2 次余力）",
+          "muscle_groups": []
+        },
+        {
+          "name": "坐姿绳索划船",
+          "sets": "39kg 4×8—12",
+          "planned_sets": "4",
+          "target": "保持 39kg；若全部组完成且余力≥2 次，+2.5kg；休息 90 秒",
+          "priority": "main",
+          "load_status": "verified",
+          "load_source": "2026-08-28 W1 上肢·拉（校准）：39kg 4×12，末组 RPE 8（留 2 次余力）",
+          "muscle_groups": []
+        },
+        {
+          "name": "坐姿器械肩上推举",
+          "sets": "30kg 3×8—12",
+          "planned_sets": "3",
+          "target": "保持 30kg；若全部组完成且余力≥3 次，+2.5kg；休息 90 秒",
+          "priority": "key",
+          "load_status": "verified",
+          "load_source": "2026-08-28 W1 上肢·拉（校准）：30kg 3×12，末组 RPE 6—7（留 3 次以上余力）",
+          "muscle_groups": []
+        },
+        {
+          "name": "绳索面拉",
+          "sets": "35kg 3×12—15",
+          "planned_sets": "3",
+          "target": "保持 35kg；若全部组完成且余力≥3 次，+2.5kg；休息 60—75 秒",
+          "priority": "key",
+          "load_status": "verified",
+          "load_source": "2026-08-28 W1 上肢·拉（校准）：35kg 3×12，末组 RPE 6—7（留 3 次以上余力）",
+          "muscle_groups": []
+        },
+        {
+          "name": "杠铃弯举",
+          "sets": "15kg 3×10—12",
+          "planned_sets": "3",
+          "target": "保持 15kg；若全部组完成且余力≥3 次，+2.5kg；休息 60—75 秒",
+          "priority": "optional",
+          "load_status": "verified",
+          "load_source": "2026-08-28 W1 上肢·拉（校准）：15kg 3×10，末组 RPE 6—7（留 3 次以上余力）",
+          "muscle_groups": []
+        },
+        {
+          "name": "悬垂举腿",
+          "sets": "自重 3×12—15",
+          "planned_sets": "3",
+          "target": "放在收尾执行；末段疲劳允许减为 2 组；稳定后逐步回到 3×15—20 再考虑负重；休息 60—90 秒",
+          "priority": "optional",
+          "load_status": "verified",
+          "load_source": null,
+          "muscle_groups": []
+        }
+      ],
+      "day_key": "上肢·拉"
+    },
+    {
+      "day": "09-12",
+      "label": "W2 补强·腹部加强",
+      "title": "补强·腹部加强",
+      "theme": "补强·腹部加强",
+      "exercises": [
+        {
+          "name": "绳索卷腹",
+          "sets": "50kg 3×12—15",
+          "planned_sets": "3",
+          "target": "保持 50kg；若全部组完成且余力≥4 次，加一档（+5kg）；休息 60—75 秒",
+          "priority": "main",
+          "load_status": "verified",
+          "load_source": "2026-09-04 W1 补强·腹部加强（校准）：龙门架跪姿绳索卷腹 50kg 3×12，体感轻松",
+          "muscle_groups": []
+        },
+        {
+          "name": "悬垂举腿",
+          "sets": "自重 3×12—15",
+          "planned_sets": "3",
+          "target": "放在收尾执行；末段疲劳允许减为 2 组；稳定后逐步回到 3×15—20 再考虑负重；休息 60—90 秒",
+          "priority": "key",
+          "load_status": "verified",
+          "load_source": null,
+          "muscle_groups": []
+        },
+        {
+          "name": "平板支撑",
+          "sets": "标准平板支撑 30—60 秒 ×3 组",
+          "planned_sets": "3",
+          "target": "补足 3 组；全部组达到 60 秒且不塌腰后再延长或进侧平板；休息 60 秒",
+          "priority": "key",
+          "load_status": "verified",
+          "load_source": "2026-09-04 W1 补强·腹部加强（校准）：1×30—60 秒，仅完成 1 组",
+          "muscle_groups": []
+        },
+        {
+          "name": "俄罗斯转体",
+          "sets": "徒手 3×15/侧",
+          "planned_sets": "3",
+          "target": "15 次/侧稳定不甩动后，可抱轻片（2.5—5kg）；休息 60 秒",
+          "priority": "key",
+          "load_status": "verified",
+          "load_source": "2026-09-04 W1 补强·腹部加强（校准）：徒手 3×12/侧，体感轻松",
+          "muscle_groups": []
+        },
+        {
+          "name": "L 坐支撑",
+          "sets": "待校准：先做屈膝 L 坐测试 15 秒；能保持后逐渐伸直腿",
+          "planned_sets": "3",
+          "target": "以控制双腿伸直为准；休息 60—90 秒",
+          "priority": "key",
+          "load_status": "calibration_required",
+          "load_source": "2026-09-04 未执行（动作不熟悉）保持待校准；09-12 现场教学屈膝退阶版，或与用户确认替换/降级",
+          "muscle_groups": []
+        }
+      ],
+      "day_key": "补强·腹部加强"
+    },
+    {
+      "day": "09-13",
+      "theme": "休息/轻活动",
+      "role": "恢复与轻活动"
+    }
+  ],
+  "cycles": [],
+  "rules": [
+    {
+      "title": "W1—W2 健身房适应与负荷校准",
+      "body": "W1 以校准为主，杠铃动作用停训前 60—70% 或空杆起步，不强行加量；W2 稳定后逐步加到计划组数"
+    },
+    {
+      "title": "W3—W4 标准体态重组训练量",
+      "body": "按计划全量执行，复合动作保持在 6—10 次区间，孤立动作 10—15 次区间"
+    },
+    {
+      "title": "双进阶（double progression）",
+      "body": "上肢/孤立动作 +2.5kg（或最小可加载档位）、下肢复合 +5kg，回到次数下限"
+    },
+    {
+      "title": "变形或余力不足",
+      "body": "保持重量或下调 5%—10%，优先保证动作质量"
+    },
+    {
+      "title": "有氧与腹部加强",
+      "body": "以能说话不喘的强度推进；腹部动作宁轻勿假，不借力"
+    },
+    {
+      "title": "负荷校准",
+      "body": "待校准动作按页面引导确定重量；完成后写入实际重量、次数、余力和动作质量。"
+    }
+  ]
+}
