@@ -2,7 +2,7 @@
 <html lang="zh-CN" data-ui-template="lzheng-fitness-workbench-v3" data-ui-revision="2026.09.10.1">
 <head>
 <meta charset="UTF-8">
-<meta name="workbench-shell-sha256" content="1c065f0db1cc7bc9e4c880c5eba1b488d36616ba18241bf1fad2dc80c96d0cc7">
+<meta name="workbench-shell-sha256" content="0509cc824873b000e48b471874003e1e7c71aa63fe1a1969bfd7f62a1c399954">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -5079,6 +5079,11 @@ body.dark-background-theme #m-nutrition .nutrition-back,body.dark-background-the
     }
   }
   /* ===== 指南页结束 ===== */
+
+/* ===== v3.3.0 外壳适配桥接（2026-09-11）=====
+   新外壳的 2026-09-10 扩展样式用 body.dark-background-theme>#navBar 把底部导航
+   改成了亮色玻璃，特异性压过定制层；此处按迁移前（before-v330-port）浏览器实测值恢复。 */
+body.dark-background-theme>#navBar.nav{background:rgba(8,10,9,.86)!important}
 </style>
 <!-- FITNESS_WORKBENCH_CUSTOM_STYLE_END -->
 </head>
