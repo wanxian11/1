@@ -46,7 +46,6 @@
     "哈克深蹲机",
     "可调式训练凳",
     "瑜伽垫",
-    "健腹轮",
     "跑步机/椭圆机/动感单车"
   ],
   "movement_profile": [
@@ -63,7 +62,7 @@
       "admission_confirmed": false
     },
     {
-      "movement": "杠铃臀推",
+      "movement": "杠铃臀桥",
       "level": "L2",
       "note": "稳定动作，负荷待现场校准",
       "admission_confirmed": false
@@ -99,7 +98,7 @@
       "admission_confirmed": false
     },
     {
-      "movement": "悬垂举腿/健腹轮",
+      "movement": "悬垂举腿/平板支撑",
       "level": "L1",
       "note": "核心动作先学骨盆控制，必要时退阶",
       "admission_confirmed": false
@@ -205,9 +204,11 @@
             }
           ],
           "load": {
-            "status": "calibration_required",
-            "starting_instruction": "先轻片热身，测试标准完成 10—12 次；余力≥4 次加一档，做不满 8 次减一档",
-            "decision_rule": "找到“标准完成 8—12 次、约留 2—3 次余力”的插销重量"
+            "status": "verified",
+            "working_weight": "50",
+            "unit": "kg",
+            "source": "2026-08-28 W1 上肢·拉（校准）：50kg 4×12，末组 RPE 8（留 2 次余力）；2026-09-11 W2 上肢·拉：按处方完成，整体体感轻松（逐组次数/余力未记录）",
+            "next_rule": "下次保持 50kg 再确认一次；若再次全部组完成且末组留≥2 次余力，可 +2.5kg（机台插销档位支持时）"
           },
           "alternatives": [
             "辅助引体向上",
@@ -251,9 +252,11 @@
             }
           ],
           "load": {
-            "status": "calibration_required",
-            "starting_instruction": "轻片测试标准完成 12 次；余力≥4 次加一档，做不满 8 次减一档",
-            "decision_rule": "找到“标准完成 8—12 次、约留 2—3 次余力”的负荷"
+            "status": "verified",
+            "working_weight": "39",
+            "unit": "kg",
+            "source": "2026-08-28 W1 上肢·拉（校准）：39kg 4×12，末组 RPE 8（留 2 次余力）；2026-09-11 W2 上肢·拉：按处方完成，整体体感轻松（逐组次数/余力未记录）",
+            "next_rule": "下次保持 39kg 再确认一次；若稳定可按机台最小档（2.5kg）加重，同样条件"
           },
           "alternatives": [
             "T杠划船",
@@ -297,9 +300,11 @@
             }
           ],
           "load": {
-            "status": "calibration_required",
-            "starting_instruction": "轻片测试标准完成 12 次；肩部动作不加量过快，余力≥4 次加一档",
-            "decision_rule": "找到“标准完成 8—12 次、约留 2—3 次余力”的负荷"
+            "status": "verified",
+            "working_weight": "30",
+            "unit": "kg",
+            "source": "2026-08-28 W1 上肢·拉（校准）：30kg 3×12，末组 RPE 6—7（留 3 次以上余力）；2026-09-11 W2 上肢·拉：按处方完成，整体体感轻松（逐组次数/余力未记录）",
+            "next_rule": "下次 +2.5kg→32.5kg 回次数下限 8；肩部动作不加量过快，保持 ≥3 次余力"
           },
           "alternatives": [
             "哑铃坐姿推举",
@@ -339,9 +344,11 @@
             }
           ],
           "load": {
-            "status": "calibration_required",
-            "starting_instruction": "轻绳测试标准完成 15 次；保持肘部高位，不借力后仰",
-            "decision_rule": "找到“标准完成 12—15 次、约留 2—3 次余力”的负荷"
+            "status": "verified",
+            "working_weight": "35",
+            "unit": "kg",
+            "source": "2026-08-28 W1 上肢·拉（校准）：35kg 3×12，末组 RPE 6—7（留 3 次以上余力）；2026-09-11 W2 上肢·拉：按处方完成，整体体感轻松（逐组次数/余力未记录）",
+            "next_rule": "优先冲次数：同重 35kg 目标 15 次；满 15 次稳定后 +2.5kg→37.5kg"
           },
           "alternatives": [
             "反向飞鸟机",
@@ -377,9 +384,11 @@
             }
           ],
           "load": {
-            "status": "calibration_required",
-            "starting_instruction": "空杆/轻杠铃测试标准完成 12 次；身体不晃动",
-            "decision_rule": "找到“标准完成 10—12 次、约留 2—3 次余力”的重量"
+            "status": "verified",
+            "working_weight": "15",
+            "unit": "kg",
+            "source": "2026-08-28 W1 上肢·拉（校准）：15kg 3×10，末组 RPE 6—7（留 3 次以上余力）；2026-09-11 W2 上肢·拉：按处方完成，整体体感轻松（逐组次数/余力未记录）",
+            "next_rule": "先冲次数：同重 15kg 目标 12 次；满 12 次稳定后 +2.5kg→17.5kg"
           },
           "alternatives": [
             "哑铃交替弯举",
@@ -392,19 +401,19 @@
           ]
         },
         {
-          "id": "day-a-ab-wheel",
-          "name": "健腹轮",
+          "id": "day-a-hanging-leg-raise",
+          "name": "悬垂举腿",
           "pattern": "核心",
           "pattern_group": "核心",
-          "modality": "器械",
-          "equipment": "健腹轮 + 瑜伽垫",
-          "purpose": "腹直肌与抗伸展核心",
+          "modality": "自重",
+          "equipment": "引体杆/高位下拉杆",
+          "purpose": "拉日收尾核心强化（健身房无健腹轮）",
           "priority": "optional",
-          "selection_reason": "拉日收尾腹部加强，健腹轮对腹肌线条和核心抗伸展刺激强",
+          "selection_reason": "健身房无健腹轮，拉日收尾核心改用悬垂举腿；动作熟悉、无需额外器械，08-28 已按 3×20 完成",
           "prescription": {
             "sets": "3",
-            "reps": "6—10",
-            "intensity": "以核心收紧不塌腰为准",
+            "reps": "15—20",
+            "intensity": "以控制骨盆后倾为准（约留 2—3 次余力）",
             "rest": "60—90 秒",
             "set_count": 3
           },
@@ -412,29 +421,24 @@
             {
               "muscle_group": "核心",
               "coefficient": 1
-            },
-            {
-              "muscle_group": "肩前束",
-              "coefficient": 0.5
-            },
-            {
-              "muscle_group": "背阔肌",
-              "coefficient": 0.5
             }
           ],
           "load": {
-            "status": "calibration_required",
-            "starting_instruction": "先做跪姿健腹轮测试 8—10 次；若无法保持骨盆中立则继续跪姿",
-            "decision_rule": "找到“标准完成 6—10 次、全程不塌腰”的难度"
+            "status": "verified",
+            "working_weight": "20",
+            "unit": "次",
+            "source": "2026-08-28 W1 上肢·拉（健腹轮替代执行）：悬垂举腿 3×20，控制良好；2026-09-04 补强日自重 3×12 轻松完成（20 次仍轻松）；2026-09-11 W2 上肢·拉：按处方完成，整体体感轻松（逐组次数/余力未记录）",
+            "next_rule": "下次自重 3×15—20；能标准完成 3×20 后再考虑负重"
           },
           "alternatives": [
-            "跪姿健腹轮",
+            "屈膝举腿",
+            "反向卷腹",
             "平板支撑"
           ],
           "technique_checks": [
-            "核心收紧不塌腰",
-            "髋部不过度下沉",
-            "缓慢推出与收回"
+            "肩胛下沉不耸肩",
+            "骨盆后倾带动腿",
+            "不摆动借力"
           ]
         }
       ],
@@ -475,14 +479,14 @@
       "exercises": [
         {
           "id": "day-b-barbell-squat",
-          "name": "杠铃深蹲",
+          "name": "器械深蹲（史密斯机）",
           "pattern": "蹲",
           "pattern_group": "蹲",
-          "modality": "自由重量",
-          "equipment": "杠铃 + 深蹲架",
+          "modality": "器械",
+          "equipment": "史密斯机（固定轨迹深蹲）",
           "purpose": "下肢蹲模式与股四头肌",
           "priority": "main",
-          "selection_reason": "2 年杠铃训练基础，恢复健身房后先以轻重量重建深蹲节奏与负荷",
+          "selection_reason": "用户回归后实际使用器械深蹲（史密斯机），轨迹稳定适合回归期；两年杠铃基础保留回归杠铃深蹲的选项",
           "prescription": {
             "sets": "4",
             "reps": "6—10",
@@ -505,18 +509,19 @@
             }
           ],
           "load": {
-            "status": "calibration_required",
-            "starting_instruction": "W1 用停训前 60% 或空杆起步，测试标准完成 8—10 次；余力≥4 次加 5kg，做不满 6 次减 5kg",
-            "decision_rule": "找到“标准完成 6—10 次、约留 2—3 次余力”的工作重量"
+            "status": "verified",
+            "working_weight": "40",
+            "unit": "kg",
+            "source": "2026-08-31 W1 下肢·蹲（校准）：器械深蹲（史密斯）35kg 4×12，整体体感良好；2026-09-07 W2 下肢·蹲：40kg 4×10（按规则 +5kg），末组余力 2—3 次",
+            "next_rule": "保持 40kg 4×8—12，冲 4×12；若全部组完成且余力≥4 次，+5kg（器械深蹲按档位加重）；若回归杠铃深蹲则从 30kg 重新校准"
           },
           "alternatives": [
             "哈克深蹲机",
             "腿举机"
           ],
           "technique_checks": [
-            "杠铃置于上背稳定",
-            "全脚掌着地",
             "膝盖与脚尖方向一致",
+            "全脚掌着地",
             "核心收紧不弓腰"
           ]
         },
@@ -548,9 +553,11 @@
             }
           ],
           "load": {
-            "status": "calibration_required",
-            "starting_instruction": "轻片测试标准完成 15 次；余力≥4 次加一档",
-            "decision_rule": "找到“标准完成 10—15 次、约留 2—3 次余力”的负荷"
+            "status": "verified",
+            "working_weight": "15",
+            "unit": "kg",
+            "source": "2026-08-31 W1 下肢·蹲（校准）：15kg 3×12；2026-09-07 W2 下肢·蹲：15kg 3×10，末组余力 2—3 次",
+            "next_rule": "保持 15kg 冲 3×12—15；若全部组完成且余力≥4 次，按机台档位加重一档"
           },
           "alternatives": [
             "哈克深蹲机",
@@ -563,66 +570,64 @@
           ]
         },
         {
-          "id": "day-b-dumbbell-rdl",
-          "name": "哑铃罗马尼亚硬拉",
+          "id": "day-b-seated-leg-curl",
+          "name": "坐姿腿弯举",
           "pattern": "髋铰链",
           "pattern_group": "髋铰链",
-          "modality": "自由重量",
-          "equipment": "哑铃",
-          "purpose": "腘绳肌与臀部髋铰链",
+          "modality": "器械",
+          "equipment": "坐姿腿弯举机",
+          "purpose": "腘绳肌与臀部后链（替代硬拉）",
           "priority": "key",
-          "selection_reason": "蹲日加入后链动作，维持髋铰链频率并强化臀腿后链",
+          "selection_reason": "健身房无硬拉条件/用户选择，改用坐姿腿弯举专注腘绳肌孤立",
           "prescription": {
             "sets": "3",
             "reps": "8—12",
             "intensity": "RPE 6—7（约留 4—3 次余力）",
-            "rest": "90—120 秒",
+            "rest": "90 秒",
             "set_count": 3
           },
           "muscle_contributions": [
             {
               "muscle_group": "腘绳肌",
-              "coefficient": 1
+              "coefficient": 1.0
             },
             {
               "muscle_group": "臀部",
               "coefficient": 0.5
-            },
-            {
-              "muscle_group": "下背/竖脊肌",
-              "coefficient": 0.5
             }
           ],
           "load": {
-            "status": "calibration_required",
-            "starting_instruction": "轻哑铃先掌握屈髋，再测试标准完成 12 次；余力≥4 次加 2kg",
-            "decision_rule": "找到“标准完成 8—12 次、约留 2—3 次余力”的重量"
+            "status": "verified",
+            "working_weight": "39",
+            "unit": "kg",
+            "source": "2026-09-07 W2 下肢·蹲（校准）：39kg 3×12，末组余力 2—3 次",
+            "next_rule": "保持 39kg 3×8—12；若全部组完成且余力≥2 次，按机台最小档加重"
           },
           "alternatives": [
-            "杠铃罗马尼亚硬拉",
-            "坐姿腿弯举"
+            "俯身腿弯举",
+            "哑铃罗马尼亚硬拉"
           ],
           "technique_checks": [
-            "髋向后推、膝盖微屈",
-            "哑铃贴近大腿",
-            "背部保持中立"
+            "膝盖对准转轴",
+            "全幅度收缩与下放",
+            "不要借力抬起"
           ]
         },
         {
           "id": "day-b-walking-lunge",
-          "name": "哑铃行走箭步蹲",
+          "name": "哑铃原地箭步蹲",
           "pattern": "单腿",
           "pattern_group": "单腿",
           "modality": "自由重量",
           "equipment": "哑铃",
           "purpose": "单腿力量与臀部",
           "priority": "key",
-          "selection_reason": "行走箭步蹲增加单腿与核心稳定，改善下肢均衡",
+          "selection_reason": "用户实际执行原地箭步蹲（10kg 哑铃），单腿与核心稳定目标一致",
           "prescription": {
             "sets": "3",
-            "reps": "8—10/侧",
+            "reps": "10—12/侧",
             "intensity": "RPE 6—7（约留 4—3 次余力）",
-            "rest": "90 秒/侧",
+            "rest": "90 秒",
             "set_count": 3
           },
           "muscle_contributions": [
@@ -640,18 +645,20 @@
             }
           ],
           "load": {
-            "status": "calibration_required",
-            "starting_instruction": "徒手/轻哑铃测试 10 步/侧，先找平衡；余力≥4 次加 2kg",
-            "decision_rule": "找到“标准完成 8—10 步/侧、约留 2—3 次余力”的重量"
+            "status": "verified",
+            "working_weight": "10",
+            "unit": "kg",
+            "source": "2026-08-31 W1 下肢·蹲（校准）：原地箭步蹲 10kg 3×12（每侧）；2026-09-07 W2 下肢·蹲：10kg 3×12/侧",
+            "next_rule": "保持 10kg；若全部组完成且余力≥4 次，+2kg 或转为行走箭步蹲"
           },
           "alternatives": [
             "原地哑铃箭步蹲",
             "保加利亚分腿蹲"
           ],
           "technique_checks": [
-            "步幅适中",
             "前膝不内扣",
-            "躯干直立"
+            "躯干直立",
+            "后腿膝盖轻触地面"
           ]
         },
         {
@@ -678,9 +685,11 @@
             }
           ],
           "load": {
-            "status": "calibration_required",
-            "starting_instruction": "中等重量测试标准完成 15 次；余力≥4 次加一档",
-            "decision_rule": "找到“标准完成 12—15 次、约留 2—3 次余力”的负荷"
+            "status": "verified",
+            "working_weight": "12",
+            "unit": "次",
+            "source": "2026-09-07 W2 下肢·蹲（校准，自重）：3×12",
+            "next_rule": "保持自重冲 3×15；3×15 稳定后可持轻哑铃（2.5—5kg）负重"
           },
           "alternatives": [
             "坐姿提踵",
@@ -716,9 +725,11 @@
             }
           ],
           "load": {
-            "status": "calibration_required",
-            "starting_instruction": "先做屈膝举腿测试 10—12 次；若身体摆动大则退阶",
-            "decision_rule": "找到“标准完成 8—12 次、不摆动借力”的难度"
+            "status": "verified",
+            "working_weight": "12",
+            "unit": "次",
+            "source": "2026-08-31 W1 下肢·蹲：2×20（计划 3 组，实际 2 组）；2026-09-04 补强日自重 3×12 轻松完成；2026-09-07 W2 下肢·蹲：1×12（末段疲劳，未完成 3 组）",
+            "next_rule": "下次自重 3×12—15（放在收尾，末段疲劳允许减为 2 组）；稳定后逐步回到 3×15—20，再考虑负重"
           },
           "alternatives": [
             "屈膝举腿",
@@ -736,14 +747,14 @@
           "exercise_ids": [
             "day-b-barbell-squat",
             "day-b-leg-press",
-            "day-b-dumbbell-rdl"
+            "day-b-seated-leg-curl"
           ],
           "note": "保留下肢主线，去掉行走箭步蹲与收尾"
         },
         "minutes_20": {
           "exercise_ids": [
             "day-b-barbell-squat",
-            "day-b-dumbbell-rdl"
+            "day-b-seated-leg-curl"
           ],
           "note": "保留蹲主项与后链动作"
         },
@@ -798,9 +809,11 @@
             }
           ],
           "load": {
-            "status": "calibration_required",
-            "starting_instruction": "W1 用停训前 60—70% 或空杆起步，测试标准完成 8—10 次；余力≥4 次加 2.5—5kg",
-            "decision_rule": "找到“标准完成 6—10 次、约留 2—3 次余力”的工作重量"
+            "status": "verified",
+            "working_weight": "17.5kg/边（每边片重，不含杆）",
+            "unit": "kg/边",
+            "source": "2026-09-01 W1 上肢·推（校准）：递增热身 5/10/15kg 每边各 1×12，工作组 17.5kg/边 2×8，体感吃力（约留 2—3 次余力）；2026-09-08 W2 上肢·推：20kg/边 1×6 + 15kg/边 2×10（3/4 组，末组力竭，组间重量未统一）",
+            "next_rule": "下次保持 17.5kg/边 统一重量完成 4×6—10，冲满 4 组；若全部组完成且余力≥2 次，每边 +2.5kg"
           },
           "alternatives": [
             "哑铃平板卧推",
@@ -845,9 +858,11 @@
             }
           ],
           "load": {
-            "status": "calibration_required",
-            "starting_instruction": "按平板卧推 60—70% 起步，测试标准完成 10—12 次；按余力调整",
-            "decision_rule": "找到“标准完成 8—12 次、约留 2—3 次余力”的重量"
+            "status": "verified",
+            "working_weight": "17.5kg/只",
+            "unit": "kg/只",
+            "source": "2026-09-01 W1 上肢·推（校准）：17.5kg/只 3×12，次数达区间上限；2026-09-08 W2 上肢·推：17.5kg/只 3×10（区间内）",
+            "next_rule": "下次保持 17.5kg/只 3×10—12；若全部组完成 12 次且余力≥3 次，每只 +2kg"
           },
           "alternatives": [
             "史密斯上斜卧推",
@@ -883,9 +898,11 @@
             }
           ],
           "load": {
-            "status": "calibration_required",
-            "starting_instruction": "轻哑铃测试标准完成 15 次；不借力耸肩",
-            "decision_rule": "找到“标准完成 12—15 次、约留 2—3 次余力”的重量"
+            "status": "verified",
+            "working_weight": "10kg/只",
+            "unit": "kg/只",
+            "source": "2026-09-08 W2 上肢·推（校准）：10kg/只 3×10",
+            "next_rule": "下次保持 10kg/只 3×10—12，质量优先不耸肩借力；若全部组完成 12 次且余力≥2 次，每只 +2kg"
           },
           "alternatives": [
             "绳索侧平举",
@@ -922,7 +939,7 @@
           ],
           "load": {
             "status": "calibration_required",
-            "starting_instruction": "轻绳测试标准完成 15 次；肘部固定不晃动",
+            "starting_instruction": "轻绳测试标准完成 15 次；肘部固定不晃动（09-01、09-08 两次未执行；09-15 为最后一次校准机会，再跳过默认替换或移除——用户 2026-09-10 确认）",
             "decision_rule": "找到“标准完成 10—15 次、约留 2—3 次余力”的负荷"
           },
           "alternatives": [
@@ -959,9 +976,11 @@
             }
           ],
           "load": {
-            "status": "calibration_required",
-            "starting_instruction": "轻片测试标准完成 15 次；髋部固定、胸椎卷曲",
-            "decision_rule": "找到“标准完成 12—15 次、约留 2—3 次余力”的负荷"
+            "status": "verified",
+            "working_weight": "50kg（龙门架配重）",
+            "unit": "kg（器械配重）",
+            "source": "2026-09-04 W1 补强·腹部加强（校准）：龙门架跪姿绳索卷腹 50kg 3×12，体感轻松（与补强日同动作同源）；2026-09-08 W2 上肢·推：未执行，09-12 补强日继续",
+            "next_rule": "下次上肢·推保持 50kg 3×12—15；若全部组完成且余力≥4 次，加一档（+5kg）"
           },
           "alternatives": [
             "器械卷腹",
@@ -1006,19 +1025,19 @@
       "warmup": [
         "原地踏步/关节活动 3 分钟",
         "自重臀桥 2 组 × 12 次",
-        "杠铃臀推轻重量热身组 1—2 组"
+        "杠铃臀桥轻重量热身组 1—2 组"
       ],
       "exercises": [
         {
           "id": "day-d-barbell-hip-thrust",
-          "name": "杠铃臀推",
+          "name": "杠铃臀桥",
           "pattern": "髋铰链",
           "pattern_group": "髋铰链",
           "modality": "自由重量",
-          "equipment": "杠铃 + 可调式训练凳/臀推凳",
+          "equipment": "杠铃（地上完成）",
           "purpose": "臀部主导力量与形态",
           "priority": "main",
-          "selection_reason": "髋日主项，杠铃臀推能高效刺激臀部并改善臀线",
+          "selection_reason": "髋日主项，杠铃臀桥能高效刺激臀部并改善臀线",
           "prescription": {
             "sets": "4",
             "reps": "8—12",
@@ -1041,13 +1060,15 @@
             }
           ],
           "load": {
-            "status": "calibration_required",
-            "starting_instruction": "W1 用空杆/轻杠铃测试标准完成 10—12 次；余力≥4 次加 5kg",
-            "decision_rule": "找到“标准完成 8—12 次、约留 2—3 次余力”的工作重量"
+            "status": "verified",
+            "working_weight": "10kg/边（每边片重，不含杆）",
+            "unit": "kg/边",
+            "source": "2026-09-03 W1 下肢·髋（校准）：10kg/边 3×12，体感吃力（约留 2—3 次余力）；2026-09-10 W2 下肢·髋：用户报告按处方完成（逐组次数/余力未记录，待补全）",
+            "next_rule": "下次保持 10kg/边 完成正式 4×8—12；若全部组完成且余力≥2 次，每边 +2.5kg"
           },
           "alternatives": [
-            "哑铃臀推",
-            "史密斯臀推"
+            "哑铃臀桥",
+            "史密斯臀桥"
           ],
           "technique_checks": [
             "肩胛在凳上",
@@ -1087,9 +1108,11 @@
             }
           ],
           "load": {
-            "status": "calibration_required",
-            "starting_instruction": "自重测试标准完成 15 次；需要时可抱轻片",
-            "decision_rule": "找到“标准完成 10—15 次、约留 2—3 次余力”的难度"
+            "status": "verified",
+            "working_weight": "5kg 抱片",
+            "unit": "kg",
+            "source": "2026-09-03 W1 下肢·髋（校准）：负重 5kg 3×12；2026-09-10 W2 下肢·髋：用户报告按处方完成（逐组次数/余力未记录，待补全）",
+            "next_rule": "下次保持 5kg 3×12—15；若全部组完成且余力≥3 次，抱片 +2.5kg"
           },
           "alternatives": [
             "俯卧两头起",
@@ -1129,9 +1152,11 @@
             }
           ],
           "load": {
-            "status": "calibration_required",
-            "starting_instruction": "轻片测试标准完成 15 次；动作幅度完整",
-            "decision_rule": "找到“标准完成 10—15 次、约留 2—3 次余力”的负荷"
+            "status": "verified",
+            "working_weight": "29kg（器械配重）",
+            "unit": "kg",
+            "source": "2026-09-03 W1 下肢·髋（校准）：29kg 3×12；2026-09-10 W2 下肢·髋：用户报告按处方完成（逐组次数/余力未记录，待补全）",
+            "next_rule": "下次保持 29kg 3×10—12；若全部组完成且余力≥2 次，按机台最小档加重"
           },
           "alternatives": [
             "坐姿腿弯举",
@@ -1175,9 +1200,11 @@
             }
           ],
           "load": {
-            "status": "calibration_required",
-            "starting_instruction": "徒手找平衡后加轻哑铃，测试标准完成 10 次/侧",
-            "decision_rule": "找到“标准完成 8—10 次/侧、约留 2—3 次余力”的重量"
+            "status": "verified",
+            "working_weight": "10kg 哑铃（每侧）",
+            "unit": "kg/只",
+            "source": "2026-09-03 W1 下肢·髋（校准）：持 10kg 哑铃 3×12/侧，首次执行，平衡不习惯（动作质量优先）；2026-09-10 W2 下肢·髋：用户报告按处方完成（逐组次数/余力未记录，待补全）",
+            "next_rule": "下次保持 10kg 哑铃 3×10—12/侧，先求平衡稳定；若动作质量稳定且余力≥2 次，每只 +2kg"
           },
           "alternatives": [
             "哑铃箭步蹲",
@@ -1214,7 +1241,7 @@
           ],
           "load": {
             "status": "calibration_required",
-            "starting_instruction": "中等重量测试标准完成 15 次；余力≥4 次加一档",
+            "starting_instruction": "中等重量测试标准完成 15 次；余力≥4 次加一档；2026-09-10 W2 下肢·髋：已执行（重量与次数未记录），09-17 第三次机会确认工作重量",
             "decision_rule": "找到“标准完成 12—15 次、约留 2—3 次余力”的负荷"
           },
           "alternatives": [
@@ -1252,7 +1279,7 @@
           ],
           "load": {
             "status": "calibration_required",
-            "starting_instruction": "先做屈膝反向卷腹测试 15 次；若腰部离地则退阶",
+            "starting_instruction": "先做屈膝反向卷腹测试 15 次；若腰部离地则退阶；2026-09-03、09-10 两次跳过（原因：忘记执行，非器械缺失或不愿做）；09-17 第三次机会，再跳过与用户确认替换或降级",
             "decision_rule": "找到“标准完成 12—15 次、腰部贴地”的难度"
           },
           "alternatives": [
@@ -1325,9 +1352,11 @@
             }
           ],
           "load": {
-            "status": "calibration_required",
-            "starting_instruction": "轻片测试标准完成 15 次；余力≥4 次加一档",
-            "decision_rule": "找到“标准完成 12—15 次、约留 2—3 次余力”的负荷"
+            "status": "verified",
+            "working_weight": "50kg（龙门架配重）",
+            "unit": "kg（器械配重）",
+            "source": "2026-09-04 W1 补强·腹部加强（校准）：龙门架跪姿绳索卷腹 50kg 3×12，体感轻松；2026-09-12 W2 补强·腹部加强：50kg 3×12，整体体感合适（未冲满 15 次，本次不加重）",
+            "next_rule": "下次保持 50kg 3×12—15；若全部组完成且余力≥4 次，加一档（+5kg）"
           },
           "alternatives": [
             "器械卷腹",
@@ -1363,9 +1392,11 @@
             }
           ],
           "load": {
-            "status": "calibration_required",
-            "starting_instruction": "先做屈膝举腿测试 10—12 次；若摆动大则退阶",
-            "decision_rule": "找到“标准完成 8—12 次、不摆动借力”的难度"
+            "status": "verified",
+            "working_weight": "自重",
+            "unit": "自重",
+            "source": "2026-09-04 W1 补强·腹部加强（校准）：自重 3×12，轻松完成（用户确认 20 次仍轻松，按计划次数执行）；2026-09-11 W2 上肢·拉与 2026-09-12 W2 补强：均完成自重 3×12（W2 微调目标 3×12—15 连续两次达标）",
+            "next_rule": "下次自重 3×15—20；能标准完成 3×20 后再考虑负重"
           },
           "alternatives": [
             "屈膝举腿",
@@ -1378,49 +1409,43 @@
           ]
         },
         {
-          "id": "day-e-ab-wheel",
-          "name": "健腹轮",
+          "id": "day-e-plank",
+          "name": "平板支撑",
           "pattern": "核心",
           "pattern_group": "核心",
-          "modality": "器械",
-          "equipment": "健腹轮 + 瑜伽垫",
-          "purpose": "抗伸展与腹直肌",
+          "modality": "自重",
+          "equipment": "瑜伽垫",
+          "purpose": "核心稳定与抗伸展耐力",
           "priority": "key",
-          "selection_reason": "健腹轮强化腹肌抗伸展能力，是腹肌线条的高效动作",
+          "selection_reason": "健身房无健腹轮，补强日改用平板支撑补充等长核心稳定，与绳索卷腹、悬垂举腿形成动态+等长组合",
           "prescription": {
             "sets": "3",
-            "reps": "6—10",
-            "intensity": "以核心收紧不塌腰为准",
-            "rest": "60—90 秒",
+            "reps": "30—60 秒",
+            "intensity": "以保持骨盆中立为准",
+            "rest": "60 秒",
             "set_count": 3
           },
           "muscle_contributions": [
             {
               "muscle_group": "核心",
               "coefficient": 1
-            },
-            {
-              "muscle_group": "肩前束",
-              "coefficient": 0.5
-            },
-            {
-              "muscle_group": "背阔肌",
-              "coefficient": 0.5
             }
           ],
           "load": {
-            "status": "calibration_required",
-            "starting_instruction": "先做跪姿健腹轮测试 8—10 次；若无法保持骨盆中立则继续跪姿",
-            "decision_rule": "找到“标准完成 6—10 次、全程不塌腰”的难度"
+            "status": "verified",
+            "working_weight": "标准平板支撑 30—60 秒",
+            "unit": "秒",
+            "source": "2026-09-04 W1 补强·腹部加强（校准）：标准平板支撑 1×30—60 秒，质量稳定（仅完成 1 组）；2026-09-12 W2 补强·腹部加强：完成 2 组×30 秒（计划 3 组，连续第二次未补满组数，原因待确认）",
+            "next_rule": "下次完成 3 组×30—60 秒；全部组达到 60 秒且不塌腰后再延长或进侧平板"
           },
           "alternatives": [
-            "跪姿健腹轮",
-            "平板支撑"
+            "跪姿平板支撑",
+            "侧平板支撑"
           ],
           "technique_checks": [
+            "头-肩-髋-踝成直线",
             "核心收紧不塌腰",
-            "髋部不过度下沉",
-            "缓慢推出与收回"
+            "不耸肩"
           ]
         },
         {
@@ -1447,9 +1472,11 @@
             }
           ],
           "load": {
-            "status": "calibration_required",
-            "starting_instruction": "徒手测试 15 次/侧；稳定后可抱轻片",
-            "decision_rule": "找到“标准完成 12—15 次/侧、不甩动”的难度"
+            "status": "verified",
+            "working_weight": "徒手",
+            "unit": "自重",
+            "source": "2026-09-04 W1 补强·腹部加强（校准）：徒手 3×12/侧，体感轻松；2026-09-12 W2 补强·腹部加强：徒手 3×12/侧（未达 15/侧，继续不抱片）",
+            "next_rule": "下次徒手 3×15/侧；全部组 15 次/侧稳定不甩动后，可抱轻片（2.5—5kg）"
           },
           "alternatives": [
             "绳索转体",
@@ -1491,7 +1518,7 @@
           "load": {
             "status": "calibration_required",
             "starting_instruction": "先做屈膝 L 坐测试 15 秒；能保持后逐渐伸直腿",
-            "decision_rule": "找到“标准完成 10—20 秒、不塌腰”的难度"
+            "decision_rule": "找到“标准完成 10—20 秒、不塌腰”的难度；2026-09-04、09-12 两次未执行（动作不熟悉/不会做），09-19 前须完成屈膝 L 坐教学校准，或与用户确认替换、降级"
           },
           "alternatives": [
             "悬垂 L 坐",
@@ -1509,7 +1536,7 @@
           "exercise_ids": [
             "day-e-cable-crunch",
             "day-e-hanging-leg-raise",
-            "day-e-ab-wheel"
+            "day-e-plank"
           ],
           "note": "保留三个核心主项"
         },
@@ -1544,7 +1571,7 @@
         "下肢·蹲",
         "下肢·髋"
       ],
-      "note": "哑铃罗马尼亚硬拉、杠铃臀推、罗马椅背屈伸、腿弯举"
+      "note": "哑铃罗马尼亚硬拉、杠铃臀桥、罗马椅背屈伸、腿弯举"
     },
     {
       "mode": "推",
@@ -1579,7 +1606,7 @@
         "下肢·髋",
         "补强·腹部加强"
       ],
-      "note": "每天收尾核心：健腹轮、悬垂举腿、绳索卷腹、反向卷腹；补强日专项腹部"
+      "note": "每天收尾核心：悬垂举腿、平板支撑、绳索卷腹、反向卷腹；补强日专项腹部"
     },
     {
       "mode": "有氧",
