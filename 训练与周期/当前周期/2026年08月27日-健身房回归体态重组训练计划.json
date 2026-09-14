@@ -939,7 +939,7 @@
           ],
           "load": {
             "status": "calibration_required",
-            "starting_instruction": "轻绳测试标准完成 15 次；肘部固定不晃动（09-01、09-08 两次未执行；09-15 为最后一次校准机会，再跳过默认替换或移除——用户 2026-09-10 确认）",
+            "starting_instruction": "轻绳测试标准完成 15 次；肘部固定不晃动（09-01、09-08 两次未执行；09-15 为最后一次校准机会，再跳过默认替换或移除——用户 2026-09-10 确认）；2026-09-14 用户确认：09-15 现场校准后回报工作重量，在此之前保持待校准",
             "decision_rule": "找到“标准完成 10—15 次、约留 2—3 次余力”的负荷"
           },
           "alternatives": [
@@ -1074,6 +1074,47 @@
             "肩胛在凳上",
             "下巴微收",
             "顶端夹臀不塌腰"
+          ]
+        },
+        {
+          "id": "day-d-reverse-crunch",
+          "name": "反向卷腹",
+          "pattern": "核心",
+          "pattern_group": "核心",
+          "modality": "自重",
+          "equipment": "瑜伽垫",
+          "purpose": "下腹与骨盆后倾控制",
+          "priority": "optional",
+          "selection_reason": "髋日收尾腹部加强，反向卷腹强化下腹与骨盆控制",
+          "prescription": {
+            "sets": "3",
+            "reps": "15",
+            "intensity": "以骨盆卷动、腰部贴地控制为准",
+            "rest": "60 秒",
+            "set_count": 3
+          },
+          "muscle_contributions": [
+            {
+              "muscle_group": "核心",
+              "coefficient": 1
+            }
+          ],
+          "load": {
+            "status": "verified",
+            "working_weight": "自重（屈膝反向卷腹）",
+            "unit": "自重",
+            "source": "无外部负荷动作，不需要重量校准；2026-09-03、09-10 两次跳过（原因：忘记执行）；2026-09-14 用户确认改为徒手屈膝版并前置到髋日第 2 个动作",
+            "next_rule": "髋日第 2 个动作执行自重屈膝反向卷腹 3×15，腰部全程贴地；若腰部离地则进一步屈膝或减小幅度；稳定完成 3×15 后再考虑伸直腿难度",
+            "decision_rule": "本动作以动作质量为达标口径（腰部贴地、骨盆卷动），不以负荷判断；2026-09-14 用户确认降级为徒手并前置"
+          },
+          "alternatives": [
+            "悬垂举腿",
+            "屈膝举腿"
+          ],
+          "technique_checks": [
+            "腰部贴地",
+            "骨盆后倾卷起",
+            "不甩腿"
           ]
         },
         {
@@ -1215,82 +1256,6 @@
             "躯干不过度前倾",
             "膝盖不内扣"
           ]
-        },
-        {
-          "id": "day-d-seated-calf-raise",
-          "name": "坐姿提踵",
-          "pattern": "蹲",
-          "pattern_group": "蹲",
-          "modality": "器械",
-          "equipment": "坐姿提踵机",
-          "purpose": "比目鱼肌/小腿下段",
-          "priority": "optional",
-          "selection_reason": "低疲劳收尾动作，与站姿提踵互补小腿刺激",
-          "prescription": {
-            "sets": "3",
-            "reps": "12—15",
-            "intensity": "RPE 6—7（约留 4—3 次余力）",
-            "rest": "60—75 秒",
-            "set_count": 3
-          },
-          "muscle_contributions": [
-            {
-              "muscle_group": "小腿",
-              "coefficient": 1
-            }
-          ],
-          "load": {
-            "status": "calibration_required",
-            "starting_instruction": "中等重量测试标准完成 15 次；余力≥4 次加一档；2026-09-10 W2 下肢·髋：已执行（重量与次数未记录），09-17 第三次机会确认工作重量",
-            "decision_rule": "找到“标准完成 12—15 次、约留 2—3 次余力”的负荷"
-          },
-          "alternatives": [
-            "站姿提踵",
-            "哑铃坐姿提踵"
-          ],
-          "technique_checks": [
-            "全幅度起落",
-            "顶峰停顿 1 秒",
-            "不弹震"
-          ]
-        },
-        {
-          "id": "day-d-reverse-crunch",
-          "name": "反向卷腹",
-          "pattern": "核心",
-          "pattern_group": "核心",
-          "modality": "自重",
-          "equipment": "瑜伽垫",
-          "purpose": "下腹与骨盆后倾控制",
-          "priority": "optional",
-          "selection_reason": "髋日收尾腹部加强，反向卷腹强化下腹与骨盆控制",
-          "prescription": {
-            "sets": "3",
-            "reps": "12—15",
-            "intensity": "以骨盆卷动控制为准",
-            "rest": "60 秒",
-            "set_count": 3
-          },
-          "muscle_contributions": [
-            {
-              "muscle_group": "核心",
-              "coefficient": 1
-            }
-          ],
-          "load": {
-            "status": "calibration_required",
-            "starting_instruction": "先做屈膝反向卷腹测试 15 次；若腰部离地则退阶；2026-09-03、09-10 两次跳过（原因：忘记执行，非器械缺失或不愿做）；09-17 第三次机会，再跳过与用户确认替换或降级",
-            "decision_rule": "找到“标准完成 12—15 次、腰部贴地”的难度"
-          },
-          "alternatives": [
-            "悬垂举腿",
-            "屈膝举腿"
-          ],
-          "technique_checks": [
-            "腰部贴地",
-            "骨盆后倾卷起",
-            "不甩腿"
-          ]
         }
       ],
       "minimum_versions": {
@@ -1369,6 +1334,47 @@
           ]
         },
         {
+          "id": "day-e-plank",
+          "name": "平板支撑",
+          "pattern": "核心",
+          "pattern_group": "核心",
+          "modality": "自重",
+          "equipment": "瑜伽垫",
+          "purpose": "核心稳定与抗伸展耐力",
+          "priority": "key",
+          "selection_reason": "健身房无健腹轮，补强日改用平板支撑补充等长核心稳定，与绳索卷腹、悬垂举腿形成动态+等长组合",
+          "prescription": {
+            "sets": "3",
+            "reps": "20—45 秒",
+            "intensity": "以保持骨盆中立、不塌腰为准",
+            "rest": "60 秒",
+            "set_count": 3
+          },
+          "muscle_contributions": [
+            {
+              "muscle_group": "核心",
+              "coefficient": 1
+            }
+          ],
+          "load": {
+            "status": "verified",
+            "working_weight": "自重平板支撑 20—45 秒",
+            "unit": "秒",
+            "source": "2026-09-04 W1 补强·腹部加强（校准）：标准平板支撑 1×30—60 秒，质量稳定（仅完成 1 组）；2026-09-12 W2 补强·腹部加强：完成 2 组×30 秒（连续第二次未补满 3 组）；2026-09-14 用户确认原因：腹部/腰部先疲劳或不适，练到后面做不满 3 组 → 时长门槛下调并前置执行顺序",
+            "next_rule": "补强日第 2 个动作执行，先把 3 组做满（20—45 秒/组）；组内若腰部下塌或腹部先疲劳，允许当组改跪姿平板退阶完成；连续两次做满 3 组且不塌腰后，再回到 30—60 秒并考虑延长或侧平板",
+            "decision_rule": "达标口径为“3 组做满 + 骨盆中立”，时长先降后升；不追求单次最长"
+          },
+          "alternatives": [
+            "跪姿平板支撑",
+            "侧平板支撑"
+          ],
+          "technique_checks": [
+            "头-肩-髋-踝成直线",
+            "核心收紧不塌腰",
+            "不耸肩"
+          ]
+        },
+        {
           "id": "day-e-hanging-leg-raise",
           "name": "悬垂举腿",
           "pattern": "核心",
@@ -1409,46 +1415,6 @@
           ]
         },
         {
-          "id": "day-e-plank",
-          "name": "平板支撑",
-          "pattern": "核心",
-          "pattern_group": "核心",
-          "modality": "自重",
-          "equipment": "瑜伽垫",
-          "purpose": "核心稳定与抗伸展耐力",
-          "priority": "key",
-          "selection_reason": "健身房无健腹轮，补强日改用平板支撑补充等长核心稳定，与绳索卷腹、悬垂举腿形成动态+等长组合",
-          "prescription": {
-            "sets": "3",
-            "reps": "30—60 秒",
-            "intensity": "以保持骨盆中立为准",
-            "rest": "60 秒",
-            "set_count": 3
-          },
-          "muscle_contributions": [
-            {
-              "muscle_group": "核心",
-              "coefficient": 1
-            }
-          ],
-          "load": {
-            "status": "verified",
-            "working_weight": "标准平板支撑 30—60 秒",
-            "unit": "秒",
-            "source": "2026-09-04 W1 补强·腹部加强（校准）：标准平板支撑 1×30—60 秒，质量稳定（仅完成 1 组）；2026-09-12 W2 补强·腹部加强：完成 2 组×30 秒（计划 3 组，连续第二次未补满组数，原因待确认）",
-            "next_rule": "下次完成 3 组×30—60 秒；全部组达到 60 秒且不塌腰后再延长或进侧平板"
-          },
-          "alternatives": [
-            "跪姿平板支撑",
-            "侧平板支撑"
-          ],
-          "technique_checks": [
-            "头-肩-髋-踝成直线",
-            "核心收紧不塌腰",
-            "不耸肩"
-          ]
-        },
-        {
           "id": "day-e-russian-twist",
           "name": "俄罗斯转体",
           "pattern": "核心",
@@ -1473,7 +1439,7 @@
           ],
           "load": {
             "status": "verified",
-            "working_weight": "徒手",
+            "working_weight": "自重（徒手，不抱片）",
             "unit": "自重",
             "source": "2026-09-04 W1 补强·腹部加强（校准）：徒手 3×12/侧，体感轻松；2026-09-12 W2 补强·腹部加强：徒手 3×12/侧（未达 15/侧，继续不抱片）",
             "next_rule": "下次徒手 3×15/侧；全部组 15 次/侧稳定不甩动后，可抱轻片（2.5—5kg）"
@@ -1486,48 +1452,6 @@
             "躯干后倾角度稳定",
             "转体来自胸椎",
             "不靠手臂甩动"
-          ]
-        },
-        {
-          "id": "day-e-l-sit-hold",
-          "name": "L 坐支撑",
-          "pattern": "核心",
-          "pattern_group": "核心",
-          "modality": "自重",
-          "equipment": "双杠/平行杠/瑜伽垫（可选）",
-          "purpose": "下腹与髋屈肌等长控制",
-          "priority": "key",
-          "selection_reason": "等长核心动作收尾，强化下腹与髋屈肌的持续张力",
-          "prescription": {
-            "sets": "3",
-            "reps": "10—20 秒",
-            "intensity": "以控制双腿伸直为准",
-            "rest": "60—90 秒",
-            "set_count": 3
-          },
-          "muscle_contributions": [
-            {
-              "muscle_group": "核心",
-              "coefficient": 1
-            },
-            {
-              "muscle_group": "肱三头肌",
-              "coefficient": 0.5
-            }
-          ],
-          "load": {
-            "status": "calibration_required",
-            "starting_instruction": "先做屈膝 L 坐测试 15 秒；能保持后逐渐伸直腿",
-            "decision_rule": "找到“标准完成 10—20 秒、不塌腰”的难度；2026-09-04、09-12 两次未执行（动作不熟悉/不会做），09-19 前须完成屈膝 L 坐教学校准，或与用户确认替换、降级"
-          },
-          "alternatives": [
-            "悬垂 L 坐",
-            "屈膝 L 坐"
-          ],
-          "technique_checks": [
-            "肩膀下沉不耸肩",
-            "双腿伸直并拢",
-            "不塌腰"
           ]
         }
       ],
@@ -1563,7 +1487,7 @@
         "下肢·蹲",
         "下肢·髋"
       ],
-      "note": "杠铃深蹲、腿举、站姿/坐姿提踵覆盖蹲与小腿"
+      "note": "杠铃深蹲、腿举、站姿提踵覆盖蹲与小腿"
     },
     {
       "mode": "髋铰链",
@@ -1742,7 +1666,8 @@
     "腹肌线条主要靠体脂下降与腹部力量同步推进，腹部动作保证质量、不借力。",
     "每周 4 次必练 + 1 次可选；若时间不足使用当天 minimum_versions。",
     "睡眠 8—9h 但入睡约 1 点，训练尽量固定时段并保证训练前状态，不因晚睡增加训练量。",
-    "热量与蛋白质只给出对话内基础提示，完整饮食方案在基线数据建立后另行制定。"
+    "热量与蛋白质只给出对话内基础提示，完整饮食方案在基线数据建立后另行制定。",
+    "2026-09-14 用户确认（四项待校准集中处理）：下肢·髋移除坐姿提踵（与蹲日站姿提踵重叠）；反向卷腹改为徒手屈膝版 3×15 并前置为髋日第 2 个动作（09-03、09-10 两次因忘记执行跳过）；补强·腹部加强移除 L 坐支撑（09-04、09-12 两次未执行，用户确认不会做）；平板支撑因腹部/腰部先疲劳下调为 20—45 秒×3 组并允许跪姿退阶、前置为补强日第 2 个动作；绳索下压保留待校准，2026-09-15 现场校准后回报工作重量。"
   ],
   "tracking_targets": [
     {
